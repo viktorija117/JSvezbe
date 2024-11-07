@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator inflacije</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="background-overlay">
+
+		<h1>Izračunaj procentualnu vrednost</h1>
+
+		<div class="container">
+			<h3>Koliko je <input type="number" min="0.1" id="procenat"> %</h3> <br>
+            <h3>Od <input type="number" min="1" id="broj"> </h3> <br>
+            <h3 id="rezultat1"></h3> <br>
+			<button onclick="procentualnaVrednost()">Izračunaj</button>
+		</div>
+
+	</div>
+
+	<div class="background-overlay">
+
+		<h1>Izračunaj procenat</h1>
+
+		<div class="container">
+			<h3><input type="number" min="1" id="broj1"> je koliki  procenat od <input type="number" min="1" id="broj2"> ?</h3>
+            <h3 id="rezultat2"></h3> <br>
+			<button onclick="izracunajProcenat()">Izračunaj</button>
+		</div>
+
+	</div>
+
+	<div class="background-overlay">
+
+		<h1>Smanjenje/povećanje</h1>
+
+		<div class="container">
+			<h3>Od <input type="number" min="1" id="brojx"></h3> <br>
+            <h3>do <input type="number" min="1" id="brojy"> ?</h3> <br>
+            <h3 id="rezultat3"></h3> <br>
+			<button onclick="smanjenjePovecanje()">Izračunaj</button>
+		</div>
+
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
