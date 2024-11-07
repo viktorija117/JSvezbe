@@ -1,0 +1,2657 @@
+
+-- Šta je JavaScript?
+
+JavaScript je programski jezik visokog nivoa koji se prvenstveno koristi za dodavanje interaktivnosti i dinamike na web stranicama. Razvijen je da radi u pregledaču (kao što su Chrome, Firefox i Edge), omogućavajući programerima da kreiraju funkcionalnosti kao što su animacije, obrasci za unos podataka, reagovanje na klikove i mnoge druge interaktivne elemente.
+
+Ključne karakteristike JavaScript-a:
+
+	Interpretirani jezik: JavaScript se ne kompajlira unapred, već se izvršava direktno u pregledaču, liniju po liniju. To ga čini brzim za razvoj i testiranje.
+
+	Klijent-server jezik: U početku je bio klijent-strani jezik (radi u pregledaču), ali s razvojem Node.js okvira, JavaScript se sada koristi i na server strani.
+
+	Objektno-orijentisan i zasnovan na prototipima: JavaScript koristi prototipove umesto klasičnog nasledstva (kao u klasičnim OOP jezicima poput Jave), što mu daje fleksibilnost u radu 	s objektima. Prototip je objekat od kojeg drugi objekti mogu nasleđivati svojstva i metode. Kada se stvori novi objekat, može biti povezan sa prototipom koji služi kao izvor 		zajedničkih svojstava i metoda.
+	Svaki objekat u JavaScript-u ima internu vezu ka svom prototipu. Ako pokušamo da pristupimo svojstvu objekta koje ne postoji u njemu direktno, JavaScript će tražiti to svojstvo u 	prototipu, a zatim u prototipu prototipa, i tako dalje (ovaj mehanizam je poznat kao prototipski lanac).
+
+	Dinamički tipiziran: Nema potrebe da definišeš tipove promenljivih (kao što su int, string itd. u nekim jezicima). JavaScript automatski određuje tipove na osnovu vrednosti.
+
+	Široka primena: Pored web-a, koristi se i u razvoju mobilnih aplikacija (React Native), desktop aplikacija (Electron), kao i u razvoju igara i aplikacija za Internet of Things (IoT).
+
+JavaScript je jedan od tri osnovna jezika za web programiranje, zajedno sa HTML-om (za strukturu) i CSS-om (za stilizaciju).
+
+-- Istorija JavaScripta-a
+
+Istorija JavaScripta je kratka, ali intenzivna – jezik je nastao brzo i evoluirao kako bi odgovorio na potrebe interneta u razvoju. 
+Ključnih momenatu u razvoju JavaScripta:
+
+1. Početak i Stvaranje JavaScripta (1995)
+Godina: 1995.
+Autor: Brendan Eich, tada programer u Netscape Communications Corporation.
+Razlog: U Netscape-u su želeli jezik koji bi omogućio interaktivnost u pretraživačima (klijentski jezik za web stranice).
+Vreme razvoja: Neverovatno, Eich je razvijao osnovnu verziju JavaScripta za samo 10 dana.
+Prvobitno ime: Mocha, zatim LiveScript, ali se brzo promenilo u JavaScript kao deo marketinške strategije. Tada je popularnost Java jezika rasla, pa su u Netscape-u odlučili da se “oslanjaju” na taj brend.
+
+2. Prvi JavaScript (Netscape Navigator 2.0)
+Prva verzija JavaScripta je bila implementirana u pretraživaču Netscape Navigator 2.0.
+Cilj je bio da se dodaju jednostavne funkcije za manipulaciju stranicom – korisnici su mogli da klikću na elemente i da sa njima interaguju bez potrebe za dodatnim učitavanjem stranice.
+
+3. Microsoft ulazi sa JScript (1996)
+Microsoft je, kako bi se takmičio sa Netscape-om, razvio svoju verziju JavaScripta pod imenom JScript, koja je bila kompatibilna sa Internet Explorer pretraživačem.
+Tako je započeo „rat pretraživača” (Browser Wars), a jedan od rezultata je bila nekompatibilnost između različitih verzija JavaScripta na različitim pretraživačima.
+
+4. Standardizacija – ECMAScript (1997)
+Kako bi se rešili problemi sa različitim verzijama JavaScripta, započela je standardizacija jezika.
+ECMA International (organizacija za standarde) je 1997. objavila prvi standard jezika pod nazivom ECMAScript (ES1).
+ECMAScript je zvanično ime standarda, dok je JavaScript postao opšti naziv za implementaciju tog standarda.
+
+5. Razvoj ECMAScript verzija
+ECMAScript 3 (1999): Prva značajna verzija sa naprednim funkcionalnostima.
+ECMAScript 4 (otkazan): Planiran kao revolucionarna verzija, ali zbog nesuglasica među članovima komiteta, napredak je zaustavljen i preusmeren ka stabilnijem unapređenju.
+ECMAScript 5 (2009): Nakon duge pauze, ova verzija je donela nekoliko važnih funkcija (strict mode, JSON podrška, dodatne metode za nizove) i dodatno poboljšala stabilnost jezika.
+
+6. ECMAScript 6 (ES6 ili ECMAScript 2015)
+Godina: 2015. godina donosi najznačajnije unapređenje JavaScripta.
+Ključne funkcionalnosti: Dodati su let i const za deklaraciju promenljivih, streličaste funkcije (=>), klase, moduli, obećanja (promises), i mnoge druge moderne funkcionalnosti.
+ES6 je postao prekretnica koja je JavaScript učinila mnogo moćnijim jezikom, pogodnim za veće i složenije projekte.
+
+7. ECMAScript verzije od 2016. do danas
+Nakon ES6, ECMA je prešla na godišnji ciklus ažuriranja jezika, sa manjim poboljšanjima i novim funkcionalnostima svake godine.
+Primeri novih dodataka: async/await (ES2017), iteratori i generatori, poboljšanja za rad sa nizovima i objektima, optional chaining (ES2020), i druge korisne funkcionalnosti.
+
+8. JavaScript van pretraživača – Node.js (2009)
+Node.js, platforma koja omogućava izvršavanje JavaScript koda na serverskoj strani, kreirana je 2009. godine.
+Node.js je omogućio programerima da koriste JavaScript za razvoj kompletnih aplikacija (front-end i back-end), što je dovelo do popularnosti JavaScript full-stack razvoja.
+
+9. Današnji JavaScript (Moderne Biblioteke i Okviri)
+Popularnost JavaScripta i stalna evolucija dovele su do razvoja brojnih biblioteka i okvira poput React, Angular, Vue, kao i alata poput Webpack i Babel.
+JavaScript danas omogućava razvoj kompleksnih aplikacija, kako u pretraživačima tako i na serverima, kao i u mobilnim aplikacijama (pomoću okvira kao što su React Native).
+
+Zaključak:
+JavaScript je od svog brzog nastanka i početnog haosa stigao do izuzetno moćnog i sveobuhvatnog jezika, koji sada ima široku primenu i podršku. Tokom godina, razvoj standarda kao što je ECMAScript, kao i stalna ažuriranja i napredak pretraživača i Node.js platforme, učinili su JavaScript jednim od najvažnijih jezika u svetu softverskog razvoja.
+
+-- Kako pokrenuti JavaScript?
+
+1. Najčešći način za pokretanje JavaScript koda je u okviru HTML stranice. Na ovaj način JavaScript može direktno manipulirati sadržajem stranice.
+	Napiši HTML datoteku sa .html ekstenzijom (npr. index.html).
+	Umetni JavaScript kod između <script> oznaka u HTML datoteci:
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+    				<meta charset="UTF-8">
+    				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    				<title>Pokretanje JavaScripta</title>
+			</head>
+			<body>
+    				<h1>Zdravo, JavaScript!</h1>
+    
+    				<!-- JavaScript kod -->
+    				<script>
+        				console.log("Ovo je poruka iz JavaScript-a!");
+       					alert("Zdravo, svet!");
+    				</script>
+			</body>
+		</html>
+Otvorite HTML datoteku u pretraživaču (dvostrukim klikom na nju ili je prevuci u prozor pretraživača). JavaScript će se automatski izvršiti.
+
+2. Pokretanje JavaScripta Lokalno – Korišćenje Node.js
+Node.js omogućava pokretanje JavaScript koda izvan pretraživača, direktno na računaru. Node.js je posebno koristan za server-side programiranje i razvoj skripti.
+
+Instaliraj Node.js:
+Preuzmi Node.js sa zvanične stranice i instaliraj ga.
+Napravi JavaScript datoteku (npr. script.js) i dodaj JavaScript kod:
+	console.log("Pozdrav iz Node.js okruženja!");
+Pokreni datoteku pomoću komandne linije:
+	Otvori terminal ili komandnu liniju.
+	Dođi do lokacije gde se nalazi script.js datoteka.
+	Pokreni komandu:
+		node script.js
+Izlaz će se prikazati u terminalu, npr., Pozdrav iz Node.js okruženja!.
+
+3. Pokretanje JavaScripta u konzoli pretraživača
+Pretraživači kao što su Chrome, Firefox i Edge imaju ugrađene JavaScript konzole u kojima možeš brzo testirati JavaScript kod.
+Otvori pretraživač (npr. Chrome).
+Otvori Konzolu za programere:
+Na Windows-u: Ctrl + Shift + J ili F12.
+Na Mac-u: Cmd + Option + J.
+U konzolu unesi JavaScript kod i pritisni Enter: console.log("Pokrenuto u konzoli pretraživača!");
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Deklaracija Varijable
+
+U JavaScriptu se varijable mogu deklarisati koristeći tri ključne reči: var, let, i const. Svaka od njih ima specifične osobine i koristi se u različitim situacijama. 
+
+1. var – Stari način deklarisanja varijabli
+Deklaracija: var x = 10;
+Opseg (Scope): var ima funkcijski opseg (function scope) – što znači da je varijabla dostupna u celoj funkciji u kojoj je deklarisana, bez obzira na blokove { }.
+Hoisting: var deklaracije se "podignu" na vrh funkcije ili globalnog opsega, što znači da možeš koristiti var varijablu čak i pre nego što je deklarisana (ali će imati vrednost undefined).
+Ponašanje: var može biti ponovo deklarisan unutar istog opsega, što može dovesti do grešaka i problema sa čitljivošću koda.
+	Primer:
+		var x = 10;
+		if (true) {
+    			var x = 20; // Ovo menja vrednost x na globalnom nivou
+		}
+		console.log(x); // 20
+Napomena: var se danas retko koristi zbog potencijalno problematičnog ponašanja.
+
+2. let – Moderna deklaracija promenljivih
+Deklaracija: let y = 10;
+Opseg (Scope): let ima blokovski opseg (block scope) – dostupan je samo unutar bloka u kojem je deklarisan (između { }).
+Hoisting: let varijable su "podignute", ali ne mogu biti korišćene pre deklaracije (temporal dead zone).
+Ponašanje: Ne možeš ponovo deklarisati let varijablu unutar istog opsega, što smanjuje mogućnost grešaka.
+	Primer:
+		let y = 10;
+		if (true) {
+    			let y = 20; // Ovo y je samo unutar ovog bloka
+    			console.log(y); // 20
+		}
+		console.log(y); // 10 (izvan bloka je zadržano prethodno y)
+Napomena: let je najčešće korišćen za varijable koje mogu menjati vrednost.
+
+3. const – Konstantne varijable
+Deklaracija: const z = 10;
+Opseg (Scope): Kao i let, const ima blokovski opseg (block scope).
+Hoisting: Slično let, const je "podignut" ali ga ne možeš koristiti pre deklaracije.
+Ponašanje: const znači da je vrednost varijable konstantna i ne može biti promenjena nakon inicijalizacije.
+Upotreba sa objektima: Kod objekata i nizova, const ne sprečava izmene elemenata ili svojstava unutar objekta – samo sprečava promenu reference.
+	Primer:
+		const z = 10;
+		z = 20; // Greška! Ne možeš promeniti vrednost konstante
+
+		// Sa objektom
+		const person = { name: "Ana" };
+		person.name = "Marko"; // Ovo je dozvoljeno, jer modifikujemo svojstvo
+		person = {}; // Ovo NIJE dozvoljeno, jer menjamo referencu na novi objekat
+Napomena: const koristiš za vrednosti koje se neće menjati, i to je poželjno kada si siguran da varijabla treba da bude konstantna.
+
+Ukratko: Kada koristiti var, let, ili const?
+
+Koristi let za promenljive koje ćeš menjati i koje su vezane za određeni blok { }.
+Koristi const za vrednosti koje nećeš menjati (idealno za konstante, objekte, i nizove koji neće menjati referencu).
+Izbegavaj var – danas se koristi samo ako održavaš stariji kod, jer može izazvati neočekivano ponašanje.
+
+-- Hoinsting - podizanje varijable
+
+Hoisting u JavaScriptu je mehanizam kojim pretraživač implicitno "podigne" deklaracije varijabli i funkcija na vrh njihovog opsega pre nego što se kod izvrši. To znači da možeš koristiti varijablu ili funkciju pre nego što je formalno deklarisana u kodu, jer će JavaScript tretirati deklaraciju kao da je na početku opsega. Međutim, ovo ponašanje može izazvati neočekivane rezultate, posebno kada se koriste var, let, i const.
+
+
+Hoisting u JavaScriptu je mehanizam kojim pretraživač implicitno "podigne" deklaracije varijabli i funkcija na vrh njihovog opsega pre nego što se kod izvrši. To znači da možeš koristiti varijablu ili funkciju pre nego što je formalno deklarisana u kodu, jer će JavaScript motor tretirati deklaraciju kao da je na početku opsega. Međutim, ovo ponašanje može izazvati neočekivane rezultate, posebno kada se koriste var, let, i const.
+
+1. Hoisting za var
+Kod deklaracija sa var, hoisting se događa, ali varijabla dobija vrednost undefined dok se ne inicijalizuje.
+	Primer za var:
+		console.log(x); // undefined
+		var x = 5;
+		console.log(x); // 5
+	Objašnjenje:
+		JavaScript tretira kod kao da je deklaracija var x; na početku.
+	Podignuta verzija koda:	
+		var x;
+		console.log(x); // undefined
+		x = 5;
+		console.log(x); // 5
+Hoisting sa var može biti zbunjujuć, jer možeš dobiti undefined ako koristiš varijablu pre inicijalizacije.
+
+2. Hoisting za let i const
+Kod let i const deklaracija, hoisting se tehnički događa, ali postoji temporalna mrtva zona (temporal dead zone) koja traje od početka opsega do linije gde je varijabla deklarisana. Ovo znači da ne možeš pristupiti varijabli deklarisanoj sa let ili const pre njene stvarne deklaracije u kodu.
+	Primer sa let:
+		console.log(y); // Greška! y se ne može koristiti pre deklaracije
+		let y = 10;
+		console.log(y); // 10
+	Objašnjenje:
+		JavaScript zna da y postoji u trenutnom opsegu zbog hoisting-a, ali ne dozvoljava njeno korišćenje pre linije let y = 10;.
+		Ovo ponašanje sprečava pristup varijablama pre nego što su deklarisane, čime se smanjuje mogućnost grešaka.
+	Primer sa const:
+		console.log(z); // Greška! z se ne može koristiti pre deklaracije
+		const z = 20;
+		console.log(z); // 20
+
+3. Hoisting za Funkcije
+Funkcije deklarisane sa function ključnom reči su u potpunosti hoistovane, što znači da možeš pozvati funkciju čak i pre njene deklaracije.
+	Primer:
+		sayHello(); // "Hello, world!"
+		function sayHello() {
+    			console.log("Hello, world!");
+		}
+	Objašnjenje:
+		Cela funkcija sayHello je podignuta na vrh, pa možeš pozvati funkciju pre deklaracije.
+	Podignuta verzija koda:
+	function sayHello() {
+    		console.log("Hello, world!");
+	}
+	sayHello(); // "Hello, world!"
+
+Napomena: Funkcije izrazi (npr. const greet = function() {...} ili let greet = () => {...}) se ne hoistuju na isti način, jer greet u ovom slučaju sledi pravila hoisting-a za let i const.
+
+Zaključak
+Hoisting znači da deklaracije varijabli i funkcija "skaču" na vrh njihovog opsega, što može dovesti do neočekivanih rezultata ako nije jasno kako se ponašaju var, let, const, i funkcije. Razumevanje hoisting-a pomaže da izbegneš greške i razjasniš ponašanje koda.
+
+-- Imenovanje varijabli
+
+Početak imena: Imena moraju početi sa slovom (a-z, A-Z), donjom crtom _, ili znakom $. Brojevi nisu dozvoljeni na početku.
+✅ let myVariable;
+❌ let 1variable; (nije dozvoljeno)
+
+Slova i brojevi: Nakon prvog znaka, imena mogu sadržati slova, brojeve, _, i $.
+✅ let user_age;
+✅ let $amount;
+
+Case-sensitive: JavaScript razlikuje velika i mala slova, tako da su myVariable i myvariable dve različite varijable.
+
+Rezervisane reči: Ne možeš koristiti rezervisane reči JavaScripta (npr. let, function, class) kao imena varijabli.
+
+
+Imenovanje promenljivih u JavaScriptu je ključno za čitljivost i održavanje koda. Evo kratkih pravila i najboljih praksi:
+
+Pravila za imenovanje promenljivih
+Početak imena: Imena moraju početi sa slovom (a-z, A-Z), donjom crtom _, ili znakom $. Brojevi nisu dozvoljeni na početku.
+
+✅ let myVariable;
+❌ let 1variable; (nije dozvoljeno)
+Slova i brojevi: Nakon prvog znaka, imena mogu sadržati slova, brojeve, _, i $.
+
+✅ let user_age;
+✅ let $amount;
+Case-sensitive: JavaScript razlikuje velika i mala slova, tako da su myVariable i myvariable dve različite varijable.
+
+Rezervisane reči: Ne možeš koristiti rezervisane reči JavaScripta (npr. let, function, class) kao imena varijabli.
+
+Korišćenje camelCase stila: Uobičajeno je da promenljive pišeš koristeći camelCase, gde prvo slovo počinje malim slovom, a svaka nova reč velikim (npr. userAge, totalAmount).
+
+Opisna imena: Koristi imena koja jasno opisuju sadržaj ili namenu varijable. Na primer:
+✅ let userAge; umesto let x;
+✅ let totalPrice; umesto let tp;
+
+Kratka, ali jasna imena: Izbegavaj previše skraćenica koje mogu zbuniti, ali koristi dovoljno kratka imena koja su lako čitljiva.
+
+Konstante velikim slovima: Za konstante koje se ne menjaju, koristi se sva velika slova sa donjim crticama za razdvajanje reči.
+✅ const MAX_USERS = 100;
+✅ const API_KEY = "abc123";
+
+-- Domet varijabli
+
+U JavaScriptu, domet ili opseg varijabli (scope) određuje gde varijabla može biti pristupna i gde prestaje da postoji. Postoje tri glavna tipa domena: globalni, funkcijski, i blokovski.
+
+1. Globalni Domet (Global Scope)
+Varijable definisane van svih funkcija i blokova nalaze se u globalnom opsegu.
+Globalne varijable su dostupne bilo gde u kodu, uključujući i unutar funkcija i blokova.
+Deklaracija: Ako koristiš var, let ili const van funkcija i blokova, varijabla postaje globalna.
+	Primer:
+		let globalVar = "Ja sam globalna!";
+		function printGlobal() {
+   	 		console.log(globalVar); // Može pristupiti globalVar
+		}
+		printGlobal(); // "Ja sam globalna!"
+Napomena: Previše globalnih varijabli može otežati održavanje koda i uzrokovati konflikt imena.
+
+2. Funkcijski Domet (Function Scope)
+Varijable deklarisane sa var unutar funkcije nalaze se u funkcijskom opsegu.
+Te varijable su dostupne samo unutar te funkcije i ne mogu se pristupiti izvan nje.
+Ako pokušaš pristupiti funkcijskoj varijabli van funkcije, dobićeš grešku.
+	Primer:
+	function greet() {
+    		var message = "Zdravo iz funkcije!";
+    		console.log(message); // "Zdravo iz funkcije!"
+	}
+	greet();
+	console.log(message); // Greška! message je nedostupan van funkcije
+Napomena: var je jedina ključna reč sa funkcijskim opsegom, dok let i const poštuju blokovski opseg čak i unutar funkcija.
+
+3. Blokovski Domet (Block Scope)
+Blok označava deo koda između { }, kao što je if blok, for petlja ili bilo koji blok kod funkcije.
+Varijable deklarisane sa let ili const unutar bloka { } su dostupne samo unutar tog bloka i ne mogu se koristiti van njega.
+let i const imaju blokovski opseg, dok var ne poštuje blokove (poštuje samo funkcijski opseg).
+	Primer sa let i const:
+	if (true) {
+    		let blockVar = "Ja sam unutar bloka!";
+    		const anotherBlockVar = "I ja!";
+    		console.log(blockVar); // "Ja sam unutar bloka!"
+	}
+	console.log(blockVar); // Greška! blockVar nije dostupan van bloka
+	Primer sa var:
+	if (true) {
+    		var funcVar = "I dalje sam dostupan!";
+	}
+	console.log(funcVar); // "I dalje sam dostupan!" - var ignoriše blokove
+Blokovski domet omogućava bolje upravljanje varijablama u manjim segmentima koda i pomaže u izbegavanju slučajnog preslikavanja varijabli.
+
+Globalni domet: varijable su dostupne svuda u kodu (van svih funkcija i blokova).
+Funkcijski domet: var varijable unutar funkcije dostupne su samo u toj funkciji.
+Blokovski domet: let i const varijable dostupne su samo unutar { } bloka gde su deklarisane.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Tipovi podataka
+
+U JavaScriptu postoji nekoliko osnovnih tipova podataka koje koristiš za rad sa različitim vrednostima. Svaki tip podataka ima specifičnu svrhu i ponašanje. 
+
+1. String
+Opis: Koristi se za rad sa tekstom.
+Sintaksa: String se zapisuje u jednostrukim ('...'), dvostrukim ("..."), ili šablonskim literalnim znakovima (`...`).
+	Primer:
+	let name = "Ana";
+	let greeting = `Zdravo, ${name}!`; 
+
+2. Number
+Opis: Koristi se za sve brojeve – cele brojeve i decimalne vrednosti.
+Specijalne vrednosti: Infinity, -Infinity, i NaN (Not-a-Number, rezultat nevalidnih matematičkih operacija).
+	Primer:
+	let age = 25;
+	let price = 19.99;
+	let result = 10 / 0; // Infinity
+	let invalidOperation = "abc" * 3; // NaN
+
+3. Boolean
+Opis: Ima samo dve moguće vrednosti: true ili false.
+Koristi se za: Logičke operacije i kontrolu toka (npr. if uslovi).
+	Primer:
+	let isLoggedIn = true;
+	let hasAccess = false;
+
+4. Null
+Opis: Predstavlja namernu odsutnost bilo koje vrednosti. Ovim označavaš da varijabla postoji, ali trenutno nema vrednost.
+	Primer:
+	let selectedColor = null; // varijabla je prazna, ali namerno postavljena na null
+
+5. Undefined
+Opis: Varijabla koja je deklarisana, ali nije inicijalizovana ima vrednost undefined.
+	Primer:
+	let user;
+	console.log(user); // undefined, jer user nema dodeljenu vrednost
+
+6. BigInt
+Opis: Koristi se za rad sa veoma velikim brojevima koji prelaze maksimalnu vrednost Number tipa (više od 2<sup>53</sup> - 1).
+Sintaksa: Broju dodaš sufiks n, ili koristiš BigInt() funkciju.
+	Primer:
+	let largeNumber = 1234567890123456789012345678901234567890n;
+	let anotherBigInt = BigInt("987654321987654321987654321");
+
+7. Symbol
+Opis: Koristi se za stvaranje jedinstvenih identifikatora. Svaki Symbol je jedinstven čak i ako ima isti opis.
+Koristi se za: Identifikaciju svojstava u objektima, kako bi se izbegli konflikti.
+	Primer:
+	let id = Symbol("id");
+	let anotherId = Symbol("id");
+	console.log(id === anotherId); // false, jer su simboli jedinstveni
+
+Rezime svih tipova podataka
+Tip		Opis							Primer
+String		Tekstualne vrednosti					"Hello", 'World'
+Number		Brojevi, uključujući cele, decimalne i specijalne	42, 3.14, NaN
+Boolean		Logičke vrednosti (true/false)				true, false
+Null		Namerno prazna vrednost					null
+Undefined	Varijabla koja nije inicijalizovana			undefined
+BigInt		Veliki brojevi						123456789012345n
+Symbol		Jedinstveni identifikatori				Symbol("id")
+
+-- typeof operator
+
+Operator typeof u JavaScriptu se koristi za provjeru tipa promenljive ili vrednosti. Vraća tip podatka u obliku stringa (tekstualne vrednosti) koji odgovara datom tipu.
+
+Sintaksa: typeof operand //operand može biti bilo koji izraz, promenljiva ili vrednost čiji tip želimo da proverimo.
+
+Vraća se:
+"number": ako je tip podatka broj
+"string": ako je tip podatka string
+"boolean": ako je tip podatka boolean
+"undefined": ako je tip podatka undefined
+"object": za objekte, uključujući null i nizove
+"function": ako je tip podatka funkcija
+"symbol": ako je tip podatka simbol
+"bigint": ako je tip podatka BigInt
+	Primeri:
+	let number = 42;
+	console.log(typeof number); // "number"
+
+	let name = "Alice";
+	console.log(typeof name); // "string"
+
+	let isActive = true;
+	console.log(typeof isActive); // "boolean"
+
+	let user;
+	console.log(typeof user); // "undefined"
+
+	let person = { name: "Bob", age: 25 };
+	console.log(typeof person); // "object"
+
+	let sum = function(a, b) { return a + b; };
+	console.log(typeof sum); // "function"
+
+	let bigNumber = 1234567890123456789012345678901234567890n;
+	console.log(typeof bigNumber); // "bigint"
+
+	let uniqueId = Symbol('id');
+	console.log(typeof uniqueId); // "symbol"
+
+	let emptyValue = null;
+	console.log(typeof emptyValue); // "object"
+	
+	let func = () => {};
+	console.log(typeof func); // "function"
+
+Korišćenje typeof u uslovima:
+	let variable = 10;
+
+	if (typeof variable === "number") {
+    	console.log("It's a number!");
+	}
+
+-- Objekti
+
+U JavaScriptu, objekti su ključni tip podataka koji omogućava da skladištiš i organizuješ povezane informacije u obliku ključeva i vrednosti (key-value pairs). 
+Objekti su veoma fleksibilni i koriste se za strukturiranje podataka, stvaranje složenih struktura i modeliranje stvarnih entiteta.
+
+Kreiranje objekta
+Objekat se može kreirati pomoću objektnog literala { } ili korišćenjem new Object().
+	Primer kreiranja objekta:
+	let person = {
+    		name: "Ana",
+    		age: 25,
+    		isStudent: true,
+    		greet: function() {
+        	console.log("Hello, " + this.name);
+    		}
+	};
+U ovom primeru:
+name, age, isStudent su ključevi (svojstva), dok su "Ana", 25, i true vrednosti tih ključeva.
+greet je metod objekta, što znači da je funkcija koja je povezana sa objektom.
+
+Pristup vrednostima objekta
+Na dva načina možeš pristupiti vrednostima unutar objekta:
+	Korišćenjem tačke (.) kada je ime svojstva poznato i validno kao identifikator.
+	Korišćenjem uglastih zagrada (["key"]) kada je ime svojstva dinamičko ili nije validan identifikator.
+	Primer:
+	console.log(person.name);         // "Ana" – pristup pomoću tačke
+	console.log(person["age"]);       // 25 – pristup pomoću uglastih zagrada
+
+	// Dinamički pristup
+	let property = "isStudent";
+	console.log(person[property]);    // true
+
+Dodavanje i ažuriranje svojstava
+Svojstva se mogu dodati ili ažurirati jednostavnim dodeljivanjem nove vrednosti:
+	person.city = "Beograd";    // Dodavanje novog svojstva
+	person.age = 26;            // Ažuriranje postojećeg svojstva
+
+Brisanje svojstava
+Svojstvo možeš obrisati pomoću delete operatora:
+	delete person.isStudent;
+	console.log(person.isStudent); // undefined
+
+Metode objekata
+Metode su funkcije unutar objekata. Možeš definisati metode direktno unutar objekta, i koristiti this ključnu reč da pristupiš drugim svojstvima objekta.
+	Primer metode:
+	let car = {
+    		brand: "Toyota",
+    		model: "Corolla",
+    		start: function() {
+        		console.log("Auto " + this.brand + " " + this.model + " je pokrenut.");
+    		}
+	};
+car.start(); // "Auto Toyota Corolla je pokrenut."
+Ovde, this.brand i this.model referišu na brand i model svojstva objekta car.
+
+Iteracija kroz svojstva objekta
+Možeš koristiti for...in petlju za iteraciju kroz sva svojstva objekta:
+	for (let key in person) {
+    		console.log(key + ": " + person[key]);
+	}
+// Ispisuje: 
+// name: Ana
+// age: 26
+// city: Beograd
+
+Ugrađeni metodi za rad sa objektima
+JavaScript ima korisne ugrađene metode za rad sa objektima:
+	Object.keys(obj) – vraća niz sa svim ključevima objekta.
+	Object.values(obj) – vraća niz sa svim vrednostima objekta.
+	Object.entries(obj) – vraća niz parova [key, value] za svaki ključ i vrednost u objektu.
+		Primer:
+		console.log(Object.keys(person));   // ["name", "age", "city"]
+		console.log(Object.values(person)); // ["Ana", 26, "Beograd"]
+		console.log(Object.entries(person)); // [["name", "Ana"], ["age", 26], ["city", "Beograd"]]
+
+		Primer kompleksnijeg objekta
+		let student = {
+    			name: "Marko",
+    			age: 22,
+    			courses: ["Matematika", "Fizika", "Informatika"],
+    			address: {
+        		street: "Kralja Petra",
+        		city: "Novi Sad"
+    		},
+    		study: function() {
+        		console.log(this.name + " uči " + this.courses[0]);
+    		}
+		};
+console.log(student.address.city);   // "Novi Sad"
+student.study();                    // "Marko uči Matematika"
+
+-- Prototip i nasleđivanje prototipa
+
+U JavaScriptu, prototip i nasleđivanje prototipa su ključni mehanizmi koji omogućavaju deljenje funkcionalnosti između objekata. Ovo je srž JavaScript-ovog modela objektnog programiranja, gde svaki objekat ima prototip sa kojeg može nasleđivati metode i svojstva.
+
+Šta je prototip?
+Prototip je objekat iz kojeg drugi objekti mogu nasleđivati svojstva i metode. Svaki objekat u JavaScriptu ima interni prototip, što omogućava deljenje funkcionalnosti.
+
+Kada pristupiš svojstvu objekta, JavaScript najpre traži svojstvo direktno na tom objektu. Ako svojstvo ne postoji, JavaScript pretražuje prototip objekta i nastavlja se penjati kroz prototipni lanac (prototype chain) dok ne pronađe traženo svojstvo ili stigne do null.
+
+Prototipni lanac (Prototype Chain)
+Prototipni lanac omogućava nasleđivanje svojstava i metoda u lancu objekata.
+
+Na vrhu svakog prototipnog lanca nalazi se Object.prototype.
+Ako traženo svojstvo ili metod ne postoji ni u jednom prototipu u lancu, rezultat će biti undefined.
+	Primer:
+	let obj = {};
+	console.log(obj.toString()); // toString metoda je u Object.prototype, nasleđuje je svaki objekat
+	Ovde, obj nema direktno definisanu toString metodu, ali je nasleđuje iz Object.prototype.
+
+Nasleđivanje prototipa putem konstruktor funkcija
+Najčešći način da kreiraš objekat sa prototipnim nasleđivanjem je korišćenje konstruktor funkcije. Kada koristiš new operator sa konstruktor funkcijom, novi objekat nasleđuje prototip konstruktor funkcije.
+	Primer sa konstruktor funkcijom:
+	function Person(name, age) {
+    		this.name = name;
+    		this.age = age;
+	}
+
+	// Dodavanje metoda na prototip
+	Person.prototype.greet = function() {
+   	console.log("Hello, my name is " + this.name);
+	};
+
+	// Kreiranje novog objekta pomoću Person konstruktora
+	let person1 = new Person("Ana", 30);
+	person1.greet(); // "Hello, my name is Ana"
+
+	U ovom primeru:
+	Person.prototype sadrži metodu greet.
+	Kada kreiramo person1 koristeći new Person, person1 nasleđuje greet metodu sa Person.prototype.
+	Moderni način nasleđivanja – Klase
+	Od ES6, JavaScript je uveo ključnu reč class, koja olakšava kreiranje prototipnih odnosa pomoću sintakse slične klasičnim objektno-orijentisanim jezicima. Iako class sintaksa 	izgleda kao pravi model klasa, ona je zapravo samo sintaktički "šećer" za prototipno nasleđivanje.
+
+	Primer sa klasama:
+	class Animal {
+    	constructor(name) {
+        	this.name = name;
+    	}
+    	speak() {
+        	console.log(this.name + " makes a noise.");
+    	}
+	}
+
+	class Dog extends Animal {
+    	speak() {
+        	console.log(this.name + " barks.");
+    	}
+	}
+	let dog = new Dog("Max");
+	dog.speak(); // "Max barks."
+
+	U ovom primeru:
+	Dog nasleđuje Animal pomoću extends ključne reči.
+	Dog klasa ima svoj speak metod, ali može koristiti i druge metode i svojstva iz Animal.
+	Object.create metoda za kreiranje objekta sa specifičnim prototipom
+	Object.create metoda omogućava kreiranje novog objekta sa specifičnim prototipom bez korišćenja konstruktora.
+
+	Primer:	
+	let animal = {
+    	speak() {
+        	console.log(this.name + " makes a noise.");
+    	}
+	};
+	let dog = Object.create(animal); // Kreira dog koji nasleđuje prototip animal
+	dog.name = "Max";
+	dog.speak(); // "Max makes a noise."
+	Ovde, dog nasleđuje speak metodu direktno iz animal objekta.
+
+Zaključak
+Prototip i nasleđivanje prototipa omogućavaju deljenje funkcionalnosti u JavaScriptu. Glavni alati za rad sa prototipima su:
+Prototipni lanac za implicitno nasleđivanje.
+Konstruktor funkcije i new operator za stvaranje instanci sa zajedničkim prototipom.
+Klase (class) za moderniji i čitljiviji način nasleđivanja.
+Object.create za kreiranje objekata sa specifičnim prototipom.
+Razumevanje prototipa omogućava bolje razumevanje kako JavaScript upravlja objektima i njihovim ponašanjem.
+
+-- Ugrađeni objekti
+
+JavaScript dolazi sa velikim brojem ugrađenih objekata (built-in objects) koji pružaju razne funkcionalnosti za rad sa osnovnim tipovima podataka, datumima, stringovima, brojevima i još mnogo toga. Ovi objekti su dostupni odmah pri učitavanju JavaScript-a i ne zahtevaju dodatni import. Evo pregleda najvažnijih ugrađenih objekata:
+
+1. Object
+Osnovni objekat iz kojeg svi drugi objekti nasleđuju svojstva i metode.
+Koristi se za: Kreiranje i manipulaciju objekata.
+	Primer:
+	let person = new Object();
+	person.name = "Ana";
+	console.log(person.hasOwnProperty("name")); // true
+
+2. Array
+Objekt koji predstavlja kolekciju elemenata, organizovanih u niz.
+Koristi se za: Skladištenje i manipulaciju kolekcijama podataka.
+Metode: push(), pop(), map(), filter(), reduce(), forEach().
+	Primer:
+	let fruits = ["jabuka", "banana", "trešnja"];
+	fruits.push("kivi");
+	console.log(fruits); // ["jabuka", "banana", "trešnja", "kivi"]
+
+3. String
+Objekt za rad sa tekstom.
+Koristi se za: Manipulaciju tekstualnim podacima.
+Metode: charAt(), slice(), substring(), toUpperCase(), toLowerCase(), includes(), replace().
+	Primer:
+	let greeting = "Hello, world!";
+	console.log(greeting.toUpperCase()); // "HELLO, WORLD!"
+
+4. Number
+Objekt za rad sa brojevima, uključujući konverziju i manipulaciju brojevnih vrednosti.
+Koristi se za: Rad sa brojevima i matematičkim operacijama.
+Svojstva i metode: Number.MAX_VALUE, Number.MIN_VALUE, toFixed(), toString().
+	Primer:
+	let num = 3.14159;
+	console.log(num.toFixed(2)); // "3.14"
+
+5. Boolean
+Objekt koji predstavlja logičke vrednosti true ili false.
+Koristi se za: Logičke provere i evaluacije.
+	Primer:
+	let isAvailable = new Boolean(true);
+	console.log(isAvailable.valueOf()); // true
+
+6. Math
+Statistički objekat za izvođenje matematičkih operacija.
+Koristi se za: Izvođenje matematičkih operacija kao što su zaokruživanje, generisanje slučajnih brojeva, trigonometrijske funkcije.
+Metode: Math.round(), Math.floor(), Math.random(), Math.max(), Math.min(), Math.sqrt(), Math.pow().
+	Primer:
+	console.log(Math.random()); // Nasumičan broj između 0 i 1
+	console.log(Math.sqrt(16)); // 4
+
+7. Date
+Objekt za rad sa datumima i vremenima.
+Koristi se za: Kreiranje, formatiranje, i manipulaciju datumskim podacima.
+Metode: getDate(), getMonth(), getFullYear(), getTime(), setDate(), setMonth().
+	Primer:
+	let today = new Date();
+	console.log(today.getFullYear()); // npr. 2024
+
+8. RegExp (Regular Expressions)
+Objekt za rad sa regularnim izrazima, koji se koriste za pretragu i manipulaciju tekstom.
+Koristi se za: Validaciju podataka, pretragu i zamenu teksta.
+	Primer:
+	let pattern = /hello/i;
+	console.log(pattern.test("Hello, world!")); // true
+
+9. Map
+Objekt za čuvanje parova ključ-vrednost gde ključevi mogu biti bilo kog tipa podataka.
+Koristi se za: Kreiranje kolekcije podataka sa fleksibilnijim tipovima ključeva.
+Metode: set(), get(), delete(), has(), clear().
+	Primer:
+	let map = new Map();
+	map.set("name", "Ana");
+	console.log(map.get("name")); // "Ana"
+
+10. Set
+Objekt koji skladišti jedinstvene vrednosti bilo kog tipa podataka.
+Koristi se za: Čuvanje jedinstvenih elemenata i uklanjanje duplikata.
+Metode: add(), delete(), has(), clear().
+	Primer:
+	let set = new Set();
+	set.add(1);
+	set.add(2);
+	set.add(1); // Ignoriše duplikat
+	console.log(set); // Set(2) {1, 2}
+
+11. JSON
+Objekt za rad sa JSON podacima (JavaScript Object Notation), popularnim formatom za prenos podataka.
+Koristi se za: Parsiranje i pretvaranje JSON podataka.
+Metode: JSON.parse(), JSON.stringify().
+	Primer:
+	let jsonData = '{"name": "Ana", "age": 25}';
+	let obj = JSON.parse(jsonData);
+	console.log(obj.name); // "Ana"
+
+12. Promise
+Objekt koji predstavlja vrednost koja može biti dostupna sada, u budućnosti, ili nikada (u slučaju greške).
+Koristi se za: Rad sa asinhronim operacijama kao što su učitavanje podataka sa servera.
+Metode: then(), catch(), finally().
+	Primer:
+	let promise = new Promise((resolve, reject) => {
+    		setTimeout(() => resolve("Uspešno učitano!"), 1000);
+	});
+	promise.then((result) => console.log(result)); // "Uspešno učitano!" nakon 1 sekunde
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Konverzija podataka
+
+U JavaScriptu, konverzija tipova je proces pretvaranja jedne vrste podataka u drugu, kao što je konverzija stringa u broj ili broja u boolean. Ova konverzija može biti eksplicitna (kada je programer jasno naznači) ili implicitna (kada JavaScript automatski izvrši konverziju). Evo pregleda osnovnih pojmova:
+
+- Type Conversion vs Type Coercion
+Type Conversion (Eksplicitna konverzija): Kada programer jasno naznači željenu konverziju koristeći ugrađene metode ili funkcije.
+
+Primer: Korišćenje Number(), String(), Boolean() za pretvaranje tipova podataka.
+	Primer:
+	let str = "123";
+	let num = Number(str); // eksplicitna konverzija u broj
+	console.log(num); // 123 (broj)
+
+- Type Coercion (Implicitna konverzija): Kada JavaScript automatski konvertuje tipove podataka u potrebni tip prilikom izvršavanja operacije.
+
+Primer: Kada se brojevi i stringovi kombinuju u operacijama kao što su + ili ==.
+	Primer:
+	let result = "5" * 2; // JavaScript implicitno konvertuje "5" u broj
+	console.log(result); // 10
+
+- Implicitna konverzija (Implicit Type Casting)
+Implicitna konverzija, ili type coercion, dešava se automatski kada JavaScript konvertuje tip podataka u drugi u skladu sa kontekstom. Najčešće se javlja u operacijama sa stringovima, brojevima i boolean vrednostima.
+
+Primeri implicitne konverzije: String konverzija u kombinaciji sa +: Kada koristiš + između broja i stringa, JavaScript konvertuje broj u string.
+	Primer:
+	let x = "Hello" + 5; // "Hello5"
+	let y = 5 + "10";    // "510"
+
+Boolean konverzija u uslovima: U uslovnim izrazima (if, while, itd.), JavaScript automatski konvertuje vrednosti u boolean.
+	Primer:
+	if ("") { // Prazan string je falsy
+    		console.log("Ovo neće biti ispisano");
+	}
+	if (1) { // 1 se smatra istinitim
+    		console.log("Ovo će biti ispisano");
+	}
+Numerička konverzija sa -, *, /: Kada koristiš brojevne operatore (-, *, /) sa stringovima koji predstavljaju brojeve, JavaScript konvertuje stringove u brojeve.
+	Primer:
+	let result = "10" - 2; // 8, jer je "10" konvertovan u broj 10
+	let anotherResult = "5" * "3"; // 15
+
+- Eksplicitna konverzija (Explicit Type Casting)
+Eksplicitna konverzija nastaje kada programer jasno specificira konverziju koristeći funkcije ili metode. Ovo daje veću kontrolu i jasnoću u kodu.
+Najčešći načini za eksplicitnu konverziju:
+U broj: Koristi Number(), parseInt() ili parseFloat() za pretvaranje stringova ili drugih vrednosti u brojeve.
+	let str = "123";
+	let num = Number(str); // 123
+	let floatNum = parseFloat("3.14"); // 3.14
+	let intNum = parseInt("42px"); // 42, zaustavlja se na prvom nepovezanom karakteru
+U string: Koristi String() ili metodu .toString() za konverziju u string.
+	Primer:
+	let num = 42;
+	let str = String(num); // "42"
+	let anotherStr = num.toString(); // "42"
+U boolean: Koristi Boolean() za konverziju u boolean vrednost (true ili false).
+	Primer:
+	let zero = 0;
+	let isZeroTrue = Boolean(zero); // false, jer je 0 falsy vrednost
+	let text = "Hello";
+	let isTextTrue = Boolean(text); // true, jer svaki ne-prazan string je truthy
+Posebni slučajevi konverzije
+Falsy i Truthy vrednosti: JavaScript automatski konvertuje određene vrednosti u true ili false u uslovima i logičkim operacijama.
+
+Falsy vrednosti (koje se konvertuju u false): 0, "" (prazan string), null, undefined, NaN, false.
+Truthy vrednosti (koje se konvertuju u true): Svi drugi brojevi (npr. 1, -1), ne-prazni stringovi, objekti, nizovi.
+Konverzija sa == i ===:
+
+== (slaba provera jednakosti): Vrši implicitnu konverziju kada se porede različiti tipovi podataka.
+=== (stroga provera jednakosti): Ne vrši konverziju i upoređuje tipove i vrednosti.
+	Primer:
+	console.log(5 == "5");  // true, jer `==` konvertuje "5" u broj
+	console.log(5 === "5"); // false, jer `===` upoređuje i tipove (broj i string nisu isti tip)
+
+Zaključak
+Implicitna konverzija (coercion) se događa automatski i može biti korisna, ali ponekad vodi ka neočekivanim rezultatima.
+Eksplicitna konverzija daje ti kontrolu nad tim kako se podaci konvertuju, čime smanjuje mogućnost grešaka.
+Najbolja praksa: Koristi eksplicitne konverzije kad god je to moguće, kako bi kod bio čitljiviji i predvidljiviji.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Strukture podataka
+
+1. Data Structures (Strukture podataka)
+Glavna kategorija koja obuhvata sve vrste struktura podataka u JavaScriptu. Strukture podataka su ključne za organizovanje i čuvanje informacija koje program koristi.
+
+1.1. Structured Data (Strukturisani podaci)
+Strukturisani podaci predstavljaju podatke koji su organizovani u određenom formatu kako bi se olakšalo njihovo skladištenje, obrada i pristup. U JavaScriptu, najčešće se koristi JSON (JavaScript Object Notation) za format strukturisanih podataka.
+
+JSON: JSON je tekstualni format za reprezentaciju strukturisanih podataka zasnovan na JavaScript objektima. Često se koristi za slanje podataka između servera i klijenata.
+	Primer:
+	let jsonData = '{"name": "Marko", "age": 30}';
+	let obj = JSON.parse(jsonData); // Pretvara JSON string u JavaScript objekat
+
+1.2. Keyed Collections (Kolekcije sa ključevima)
+Kolekcije sa ključevima su strukture podataka koje omogućavaju mapiranje ključeva na vrednosti. U JavaScriptu postoje četiri glavna tipa kolekcija sa ključevima:
+
+Map: Struktura podataka koja omogućava skladištenje ključ-vrednost parova gde ključevi mogu biti bilo kog tipa (brojevi, stringovi, objekti itd.).
+	Primer:
+	let map = new Map();
+	map.set('key', 'value');
+	console.log(map.get('key')); // "value"
+
+WeakMap: Slično kao Map, ali ključevi moraju biti objekti. WeakMap nema snažnu referencu na ključeve, što omogućava automatsko uklanjanje ključeva kada više nisu u upotrebi (smanjuje memorijsko opterećenje).
+	Primer:
+	let weakMap = new WeakMap();
+	let obj = {};
+	weakMap.set(obj, 'some value');
+
+Set: Struktura podataka koja skladišti jedinstvene vrednosti (bez duplikata). Koristi se za skladištenje različitih vrednosti i omogućava brzu proveru prisutnosti elemenata.
+	Primer:
+	let set = new Set();
+	set.add(1);
+	set.add(2);
+	console.log(set.has(1)); // true
+
+WeakSet: Slično kao Set, ali može skladištiti samo objekte i nema snažnu referencu na njih, što omogućava njihovo automatsko uklanjanje kada više nisu potrebni.
+	Primer:
+	let weakSet = new WeakSet();
+	let obj = {};
+	weakSet.add(obj);
+
+1.3. Indexed Collections (Kolekcije sa indeksima)
+Kolekcije sa indeksima su strukture podataka gde su elementi organizovani po indeksima (pozicijama). U JavaScriptu, glavne kolekcije sa indeksima su Arrays i Typed Arrays.
+
+Arrays (Nizovi): Nizovi su strukturisani u liste elemenata indeksiranih celobrojnim indeksima (počev od 0). Mogu skladištiti vrednosti različitih tipova podataka.
+	Primer:
+	let arr = [1, 2, 3];
+	console.log(arr[0]); // 1
+
+Typed Arrays (Tipizirani nizovi): Struktura podataka za rad sa binarnim podacima. Typed Arrays su specijalizovani nizovi za skladištenje podataka određenog tipa, kao što su Int8Array, Float32Array itd., i koriste se u aplikacijama koje zahtevaju manipulaciju binarnim podacima, npr. grafika ili audio.
+	Primer:
+	let intArray = new Int32Array(3);
+	intArray[0] = 42;
+	console.log(intArray[0]); // 42
+
+Sažetak:
+Structured Data: Fokusira se na organizovane podatke, uglavnom putem JSON formata.
+Keyed Collections: Uključuje strukture podataka koje mapiraju ključeve na vrednosti, kao što su Map, WeakMap, Set, i WeakSet.
+Indexed Collections: Kolekcije koje koriste indekse za pristup elementima, kao što su Arrays i Typed Arrays.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Poređenje
+
+1. Value Comparison Operators (Operatori za poređenje vrednosti)
+U JavaScriptu, postoje tri glavna načina za poređenje vrednosti:
+
+== (slabo poređenje): Ovaj operator poredi dve vrednosti nakon implicitne konverzije, što znači da pokušava da konvertuje vrednosti u isti tip pre poređenja. Na primer, 2 == "2" će biti true jer se string "2" konvertuje u broj 2 pre poređenja. Ovaj operator može dovesti do neočekivanih rezultata zbog implicitne konverzije tipova, pa se često preporučuje da se koristi === za poređenja.
+	Primer:
+	console.log(2 == "2"); // true
+
+=== (strogo poređenje): Strogo poređenje upoređuje vrednosti bez konverzije tipova. Dakle, 2 === "2" je false jer 2 (broj) nije isto što i "2" (string). Ovaj operator je preporučljiviji u većini slučajeva jer izbegava implicitnu konverziju i daje predvidljivije rezultate.
+	Primer:
+	console.log(2 === "2"); // false
+	console.log(2 === 2);   // true
+Object.is: Funkcija Object.is se koristi za precizno poređenje vrednosti. Radi slično kao ===, ali rešava neke specifične slučajeve gde === ne daje intuitivne rezultate, kao što su 	NaN === NaN i +0 === -0. Na primer, Object.is(NaN, NaN) će biti true, dok NaN === NaN daje false.
+	Primer:
+	console.log(Object.is(NaN, NaN)); // true
+	console.log(Object.is(+0, -0));   // false
+
+2. Equality Comparisons (Poređenja jednakosti)
+Ova kategorija obuhvata algoritme za različite oblike poređenja jednakosti. U JavaScriptu postoje različiti algoritmi za poređenje vrednosti, a svaki se koristi u određenim situacijama.
+
+isLooselyEqual: Ovaj algoritam predstavlja ponašanje == (slabo poređenje). On prvo konvertuje vrednosti u isti tip (ako su različiti) i tek onda vrši poređenje. Ovo može biti korisno kada želite fleksibilnije poređenje, ali može dovesti do grešaka zbog implicitne konverzije tipova.
+	Primer:
+	console.log(2 == "2"); // true
+
+isStrictlyEqual: Ovaj algoritam predstavlja ponašanje === (strogo poređenje). Poredi vrednosti bez ikakve konverzije tipova, pa su vrednosti različitih tipova uvek false.
+	Primer:
+	console.log(2 === "2"); // false
+
+SameValueZero: Ovaj algoritam je sličan === poređenju, ali tretira +0 i -0 kao jednake. Takođe, NaN se poredi kao jednak NaN. Ovaj algoritam koristi se u nekim JavaScript strukturama podataka kao što su Set i Map za proveru jednakosti ključeva.
+	Primer:
+	console.log(Object.is(+0, -0));      // false
+	console.log(SameValueZero(+0, -0));  // true
+
+SameValue: Algoritam SameValue ponaša se slično Object.is, što znači da tretira +0 i -0 kao različite, dok NaN poredi kao jednak NaN. Koristi se u ECMAScript specifikaciji kada je potrebno precizno poređenje vrednosti bez implicitnih konverzija.
+	Primer:
+	console.log(Object.is(NaN, NaN)); // true
+	console.log(Object.is(+0, -0));   // false
+
+Sažetak
+==: Slabo poređenje sa implicitnom konverzijom tipova.
+===: Strogo poređenje bez konverzije tipova.
+Object.is: Poređenje sa posebnom logikom za NaN i +0 / -0.
+isLooselyEqual: Algoritam koji koristi implicitnu konverziju (==).
+isStrictlyEqual: Algoritam koji koristi striktno poređenje (===).
+SameValueZero: Tretira +0 i -0 kao jednake, dok NaN === NaN.
+SameValue: Slično Object.is, precizno poređenje bez implicitnih konverzija.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Petlje i iteracije
+
+1. for Petlja
+Petlja for je jedna od najčešće korišćenih petlji za ponavljanje u JavaScriptu. Koristi se kada znamo tačan broj iteracija unapred.
+
+Sintaksa:
+for (inicijalizacija; uslov; inkrement/dekrement) {
+    // Kod koji će se izvršiti u svakoj iteraciji
+}
+
+Primer:
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+// Ispisuje: 0, 1, 2, 3, 4
+
+Inicijalizacija: Varijabla se inicijalizuje na početku petlje (npr. let i = 0).
+Uslov: Proverava se pre svake iteracije; ako je true, petlja se nastavlja, a ako je false, petlja se prekida.
+Inkrement/Dekrement: Izvršava se nakon svakog prolaska kroz petlju, obično za povećanje ili smanjenje brojača (i++).
+
+
+
+2. while Petlja
+while petlja se koristi kada nije unapred poznat broj iteracija, ali se iteracije nastavljaju dok je neki uslov true.
+
+Sintaksa:
+while (uslov) {
+    // Kod koji će se izvršiti dok je uslov tačan
+}
+
+Primer:
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+// Ispisuje: 0, 1, 2, 3, 4
+
+Važno: Postoji rizik od beskonačne petlje ako se uslov nikad ne promeni u false.
+
+
+
+3. do...while Petlja
+do...while petlja je slična while petlji, ali se kod uvek izvršava barem jednom, jer se uslov proverava na kraju iteracije.
+
+Sintaksa:
+do {
+    // Kod koji će se izvršiti barem jednom
+} while (uslov);
+
+Primer:
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);
+// Ispisuje: 0, 1, 2, 3, 4
+
+Ova petlja je korisna kada želimo da se blok koda izvrši barem jednom, bez obzira na početni uslov.
+
+
+
+4. for...of Petlja
+for...of petlja se koristi za iteraciju kroz vrednosti elemenata iterabilnih objekata, kao što su nizovi, String, Map, Set, itd.
+
+Sintaksa:
+for (const element of iterable) {
+    // Kod koji će se izvršiti za svaki element
+}
+
+Primer:
+const niz = [10, 20, 30];
+for (const broj of niz) {
+    console.log(broj);
+}
+// Ispisuje: 10, 20, 30
+
+for...of je koristan za iteraciju kroz vrednosti kolekcija.
+
+
+
+5. for...in Petlja
+for...in petlja se koristi za iteraciju kroz sve ključeve (indekse ili svojstva) objekta. Najčešće se koristi sa objektima, ali može se koristiti i sa nizovima (iako to nije preporučeno jer može dovesti do neočekivanih rezultata kod nizova).
+
+Sintaksa:
+for (const kljuc in objekat) {
+    // Kod koji će se izvršiti za svaki kljuc
+}
+
+Primer:
+const osoba = { ime: "Ana", godine: 25 };
+for (const kljuc in osoba) {
+    console.log(`${kljuc}: ${osoba[kljuc]}`);
+}
+// Ispisuje:
+// ime: Ana
+// godine: 25
+
+Napomena: for...in nije preporučen za iteraciju kroz nizove zbog potencijalnih dodatnih svojstava koje niz može imati.
+
+
+
+6. Kontrolni izrazi break i continue
+Ovi izrazi omogućavaju kontrolu toka unutar petlji.
+
+break: Koristi se za trenutno prekidanje petlje i izlazak iz nje.
+
+Primer:
+for (let i = 0; i < 10; i++) {
+    if (i === 5) break;
+    console.log(i);
+}
+// Ispisuje: 0, 1, 2, 3, 4
+
+continue: Preskače trenutnu iteraciju i prelazi na sledeću.
+
+Primer:
+for (let i = 0; i < 10; i++) {
+    if (i === 5) continue;
+    console.log(i);
+}
+// Ispisuje: 0, 1, 2, 3, 4, 6, 7, 8, 9
+
+Zaključak
+Svaka petlja ima specifične primene u zavisnosti od tipa kolekcije i potreba iteracije:
+
+for je koristan kada znamo tačan broj iteracija.
+while se koristi kada ne znamo koliko puta treba da se izvrši iteracija.
+do...while garantuje barem jedno izvršavanje.
+for...of je idealan za iteriranje kroz vrednosti iterabilnih objekata.
+for...in je najbolje koristiti za iteraciju kroz svojstva objekata.
+Kontrolni izrazi break i continue omogućavaju fleksibilniju kontrolu toka u svim vrstama petlji.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Kontrola toka
+
+1. Conditional Statements (Uslovni izrazi)
+Uslovni izrazi omogućavaju da program donosi odluke i izvršava različite delove koda na osnovu određenih uslova.
+
+if...else Izraz
+if...else je osnovni uslovni izraz koji omogućava izvršavanje jednog bloka koda ako je uslov true, a drugog ako je uslov false.
+
+Sintaksa:
+if (uslov) {
+    // Kod koji se izvršava ako je uslov tačan
+} else {
+    // Kod koji se izvršava ako uslov nije tačan
+}
+
+Primer:
+let broj = 5;
+if (broj > 0) {
+    console.log("Pozitivan broj");
+} else {
+    console.log("Nije pozitivan broj");
+}
+
+else if se koristi za više uslova:
+
+Primer:
+let ocena = 85;
+if (ocena >= 90) {
+    console.log("Odličan");
+} else if (ocena >= 70) {
+    console.log("Dobar");
+} else {
+    console.log("Potrebno je više vežbati");
+}
+
+
+
+Switch Izraz
+switch izraz omogućava višestruko grananje na osnovu vrednosti jedne promenljive. Koristi se kada postoji mnogo mogućih vrednosti za jedan izraz i želite da svaka vrednost vodi do različitog koda.
+
+Sintaksa:
+switch (izraz) {
+    case vrednost1:
+        // Kod koji se izvršava za vrednost1
+        break;
+    case vrednost2:
+        // Kod koji se izvršava za vrednost2
+        break;
+    default:
+        // Kod koji se izvršava ako nijedan case nije odgovarajući
+}
+
+Primer:
+let dan = "utorak";
+switch (dan) {
+    case "ponedeljak":
+        console.log("Početak nedelje!");
+        break;
+    case "utorak":
+        console.log("Drugi dan nedelje");
+        break;
+    default:
+        console.log("Neki drugi dan");
+}
+// Ispisuje: Drugi dan nedelje
+
+2. Exceptional Handling (Rukovanje Izuzecima)
+Rukovanje izuzecima omogućava sigurno detektovanje i rukovanje greškama tokom izvršavanja koda.
+
+throw Statement
+throw izraz koristi se za generisanje grešaka koje program može obraditi putem try/catch strukture.
+
+Sintaksa:
+throw izraz;
+
+Primer:
+let starost = -5;
+if (starost < 0) {
+    throw new Error("Starost ne može biti negativna!");
+}
+Ovaj primer generiše grešku sa porukom „Starost ne može biti negativna!” ako je vrednost starost negativna.
+
+
+
+try...catch...finally
+try...catch...finally je struktura za rukovanje greškama koja omogućava izvršavanje bloka koda, hvatanje grešaka ako se pojave, i izvršavanje završnog bloka koda bez obzira na to da li je došlo do greške ili ne.
+
+Sintaksa:
+try {
+    // Kod koji može izazvati grešku
+} catch (greška) {
+    // Kod koji se izvršava ako dođe do greške
+} finally {
+    // Kod koji se uvek izvršava
+}
+
+Primer:
+try {
+    let rezultat = 10 / 0;
+    console.log(rezultat);
+} catch (error) {
+    console.log("Došlo je do greške:", error.message);
+} finally {
+    console.log("Ovaj kod se uvek izvršava");
+}
+// Ispisuje: Došlo je do greške: Infinity
+// Ispisuje: Ovaj kod se uvek izvršava
+
+try blok sadrži kod koji može da generiše grešku.
+catch blok sadrži kod koji se izvršava ako dođe do greške unutar try bloka.
+finally blok sadrži kod koji se izvršava bez obzira na to da li je došlo do greške.
+
+Error Objects (Objekti greške)
+Error objekti omogućavaju bolju kontrolu nad greškama u JavaScript-u. Postoji nekoliko ugrađenih tipova grešaka kao što su Error, TypeError, RangeError, SyntaxError, itd. Svaki tip greške pruža specifične informacije o prirodi greške.
+
+Primer:
+try {
+    throw new TypeError("Ova vrednost nije odgovarajućeg tipa!");
+} catch (e) {
+    console.log(e.name); // Ispisuje: TypeError
+    console.log(e.message); // Ispisuje: Ova vrednost nije odgovarajućeg tipa!
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Operatori i izrazi
+
+1. Conditional Operators (Uslovni operatori)
+Uslovni operatori omogućavaju izvršavanje različitih izraza u zavisnosti od određenog uslova. Najpoznatiji uslovni operator je ternarni operator ? :.
+
+Sintaksa:
+uslov ? izraz1 : izraz2;
+
+Primer:
+let broj = 5;
+let rezultat = broj > 0 ? "Pozitivan" : "Negativan";
+console.log(rezultat); // Ispisuje: Pozitivan
+
+
+
+2. Comma Operators (Operatori zareza)
+Operator zareza , omogućava izvođenje više izraza u jednoj liniji koda. Vrednost celog izraza je poslednji izraz u nizu.
+
+Primer:
+let x = (2, 3, 4);
+console.log(x); // Ispisuje: 4
+
+
+
+3. Unary Operators (Unarni operatori)
+Unarni operatori deluju na jednom operandu i uključuju operatore kao što su ++ (inkrement), -- (dekrement), typeof (tip promenljive), delete (brisanje svojstva objekta) i void (procena izraza bez vraćanja vrednosti).
+
+Primer:
+let broj = 10;
+console.log(typeof broj); // Ispisuje: number
+console.log(++broj); // Ispisuje: 11
+
+
+
+4. Relational Operators (Relacijski operatori)
+Relacijski operatori se koriste za upoređivanje vrednosti. Uključuju operatore kao što su < (manje od), <= (manje ili jednako), > (veće od), >= (veće ili jednako).
+
+Primer:
+console.log(5 < 10); // Ispisuje: true
+console.log(10 >= 10); // Ispisuje: true
+
+
+
+5. Assignment Operators (Operatori dodele)
+Operatori dodele se koriste za dodeljivanje vrednosti promenljivama. Standardni operator dodele je =, dok složeni operatori uključuju +=, -=, *=, /=, itd.
+
+Primer:
+let x = 5;
+x += 3; // Isto kao x = x + 3
+console.log(x); // Ispisuje: 8
+
+
+
+6. Comparison Operators (Operatori poređenja)
+Operatori poređenja se koriste za poređenje vrednosti i vraćaju true ili false. Oni uključuju == (jednako), === (strogo jednako), != (nije jednako), !== (strogo nije jednako).
+
+Primer:
+console.log(5 == "5"); // Ispisuje: true (samo po vrednosti)
+console.log(5 === "5"); // Ispisuje: false (po vrednosti i tipu)
+
+
+
+7. Arithmetic Operators (Aritmetički operatori)
+Aritmetički operatori se koriste za osnovne matematičke operacije. Uključuju + (sabiranje), - (oduzimanje), * (množenje), / (deljenje), % (modulo), ** (stepenovanje).
+
+Primer:
+let a = 10, b = 3;
+console.log(a + b); // Ispisuje: 13
+console.log(a % b); // Ispisuje: 1
+
+
+
+8. Bitwise Operators (Bitni operatori)
+Bitni operatori rade na binarnom nivou i uključuju operatore kao što su & (bitno I), | (bitno ILI), ^ (bitno ekskluzivno ILI), ~ (bitna negacija), << (pomak ulevo), >> (pomak udesno).
+
+Primer:
+console.log(5 & 1); // Ispisuje: 1 (0101 & 0001 = 0001)
+
+
+
+9. Logical Operators (Logički operatori)
+Logički operatori se koriste za logičke operacije sa boolean vrednostima i uključuju && (logičko I), || (logičko ILI) i ! (logička negacija).
+
+Primer:
+let x = true, y = false;
+console.log(x && y); // Ispisuje: false
+console.log(x || y); // Ispisuje: true
+
+
+
+10. BigInt Operators
+BigInt operatori su specijalizovani operatori koji se koriste sa BigInt tipom podataka za rad sa velikim brojevima izvan opsega Number tipa. Ovi operatori uključuju standardne aritmetičke operacije ali specifične za BigInt vrednosti.
+
+Primer:
+let big = 123456789012345678901234567890n;
+console.log(big + 1n); // Ispisuje: 123456789012345678901234567891n
+
+
+
+11. String Operators (String operatori)
+String operatori se koriste za manipulaciju stringovima. Glavni operator je + koji služi za konkatenaciju (spajanje) stringova.
+
+Primer:
+let ime = "John";
+let prezime = "Doe";
+console.log(ime + " " + prezime); // Ispisuje: John Doe
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Funkcije
+
+1. Default Params (Podrazumevani parametri)
+Podrazumevani parametri omogućavaju dodelu zadate vrednosti parametru u slučaju da on nije prosleđen prilikom poziva funkcije. Ovaj koncept pojednostavljuje rad sa funkcijama koje imaju opcionalne parametre.
+
+Primer:
+function pozdrav(ime = "Gost") {
+    console.log(`Zdravo, ${ime}!`);
+}
+pozdrav(); // Ispisuje: Zdravo, Gost!
+pozdrav("Ana"); // Ispisuje: Zdravo, Ana!
+
+
+
+2. Rest (Ostatak parametara)
+Rest operator (...) omogućava prikupljanje neodređenog broja argumenata u jedan niz, što je korisno kada funkcija treba da obradi promjenjivi broj parametara.
+
+Primer:
+function saberi(...brojevi) {
+    return brojevi.reduce((a, b) => a + b, 0);
+}
+console.log(saberi(1, 2, 3, 4)); // Ispisuje: 10
+
+
+
+3. Function Parameters (Parametri funkcije)
+Parametri funkcije predstavljaju ulazne vrednosti koje funkcija koristi za izvođenje operacija. Parametri mogu biti opcionalni ili obavezni, a mogu koristiti default i rest sintaksu.
+
+Primer:
+function mnozi(a, b = 1) {
+    return a * b;
+}
+console.log(mnozi(5)); // Ispisuje: 5
+
+
+
+4. Arrow Functions (Streličaste funkcije)
+Streličaste funkcije su kraća sintaksa za pisanje funkcija uvedena u ES6. Nemaju svoj this kontekst, što ih čini korisnim za funkcije unutar drugih funkcija ili metoda.
+
+Primer:
+const pozdrav = (ime) => `Zdravo, ${ime}!`;
+console.log(pozdrav("Marko")); // Ispisuje: Zdravo, Marko!
+
+
+
+5. IIFEs (Immediately Invoked Function Expressions)
+IIFE je funkcija koja se automatski izvršava odmah nakon što je definisana. Ove funkcije se koriste kada je potrebno kreirati izolovan domen za podatke.
+
+Primer:
+(function() {
+    console.log("Ova funkcija se izvršava odmah!");
+})();
+
+
+
+6. arguments object
+arguments je pseudo-niz objekta koji sadrži sve argumente prosleđene funkciji. Koristi se u običnim funkcijama da bi omogućio pristup svim prosleđenim vrednostima, čak i ako nisu eksplicitno definisani parametri.
+
+Primer:
+function prikaziArgumente() {
+    console.log(arguments);
+}
+prikaziArgumente(1, 2, 3); // Ispisuje: [1, 2, 3]
+
+
+
+7. Scope & Function Stack (Domet i stek funkcija)
+Domet funkcije (scope) odnosi se na dostupnost promenljivih unutar funkcije. U JavaScript-u postoje globalni, lokalni i blokovski domeni. Stek funkcija je struktura podataka koja prati redosled poziva funkcija.
+
+
+
+8. Built-in Functions (Ugrađene funkcije)
+JavaScript ima niz ugrađenih funkcija kao što su parseInt(), setTimeout(), Math.max(), i druge, koje pomažu u obavljanju uobičajenih zadataka bez potrebe za pisanjem dodatnog koda.
+
+Primer:
+console.log(Math.max(10, 20, 30)); // Ispisuje: 30
+
+
+
+9. Recursion (Rekurzija)
+Rekurzija se odnosi na tehniku u kojoj funkcija poziva samu sebe. Koristi se za rešavanje problema koji se mogu razložiti na manje slične podproblemske strukture.
+
+Primer:
+function faktorijel(n) {
+    if (n === 0) return 1;
+    return n * faktorijel(n - 1);
+}
+console.log(faktorijel(5)); // Ispisuje: 120
+
+
+
+10. Lexical Scoping (Leksički domet)
+Leksički domet znači da funkcija u JavaScript-u može pristupiti promenljivama definisanim u svom okruženju u trenutku kada je kreirana. To omogućava ugnježdene funkcije koje imaju pristup varijablama izvan sopstvenog domena.
+
+Primer:
+function spoljasnja() {
+    let poruka = "Zdravo";
+    function unutrasnja() {
+        console.log(poruka);
+    }
+    unutrasnja();
+}
+spoljasnja(); // Ispisuje: Zdravo
+
+
+
+11. Closures (Zatvaranja)
+Zatvaranje je mehanizam u kojem funkcija „pamti“ varijable iz svog leksičkog domena čak i nakon što je domen u kojem je kreirana završen. To omogućava funkcijama da „zatvore“ i zadrže pristup podacima čak i kada su ti podaci izvan njihovog trenutnog domena.
+
+Primer:
+function pozdrav(ime) {
+    return function() {
+        console.log(`Zdravo, ${ime}`);
+    };
+}
+let pozdravMarko = pozdrav("Marko");
+pozdravMarko(); // Ispisuje: Zdravo, Marko
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- DOM APIs
+
+DOM (Document Object Model) API omogućava manipulaciju strukture HTML i XML dokumenata koristeći JavaScript. DOM predstavlja dokument kao hijerarhijsku strukturu sa čvorovima (nodes) koje predstavljaju različite delove HTML-a (kao što su elementi, atributi i tekst). Ova struktura omogućava dinamičku interakciju s web stranicama.
+
+Glavne kategorije DOM API-ja
+DOM API sadrži nekoliko ključnih metoda i svojstava koja se koriste za dohvat, kreiranje, manipulaciju i uklanjanje elemenata unutar web stranice. Evo pregleda glavnih kategorija DOM API-ja:
+
+1. Selektovanje elemenata
+DOM API omogućava dohvaćanje elemenata u dokumentu putem različitih metoda za selektovanje:
+document.getElementById(): Dohvata element po id atributu.
+
+Primer:
+const naslov = document.getElementById("naslov");
+document.getElementsByClassName(): Vraća listu elemenata sa datom klasom.
+
+Primer:
+const paragrafi = document.getElementsByClassName("tekst");
+document.getElementsByTagName(): Vraća listu elemenata sa datim imenom tag-a.
+
+Primer:
+const sviDivovi = document.getElementsByTagName("div");
+document.querySelector(): Vraća prvi element koji odgovara CSS selektoru.
+
+Primer:
+const prviDiv = document.querySelector("div.tekst");
+document.querySelectorAll(): Vraća sve elemente koji odgovaraju CSS selektoru.
+
+Primer:
+const sviLinkovi = document.querySelectorAll("a");
+
+
+
+2. Manipulacija sadržajem
+Metode i svojstva za izmene sadržaja elemenata:
+textContent: Postavlja ili dobija tekstualni sadržaj elementa.
+
+Primer:
+const paragraf = document.getElementById("opis");
+paragraf.textContent = "Novi tekst sadržaj.";
+innerHTML: Postavlja ili dobija HTML sadržaj unutar elementa.
+
+Primer:
+const container = document.getElementById("container");
+container.innerHTML = "<p>Novi paragraf</p>";
+outerHTML: Menja ceo HTML element, uključujući sam element.
+
+Primer:
+const naslov = document.getElementById("naslov");
+naslov.outerHTML = "<h2>Novi naslov</h2>";
+
+
+
+3. Manipulacija atributima
+DOM API omogućava dodavanje, uklanjanje i izmenu atributa:
+getAttribute(): Dohvata vrednost atributa.
+
+Primer:
+const link = document.querySelector("a");
+const href = link.getAttribute("href");
+setAttribute(): Postavlja ili menja vrednost atributa.
+
+Primer:
+link.setAttribute("href", "https://novi-link.com");
+removeAttribute(): Uklanja atribut iz elementa.
+
+Primer:
+link.removeAttribute("target");
+hasAttribute(): Proverava da li element ima određeni atribut.
+
+Primer:
+if (link.hasAttribute("title")) {
+  console.log("Link ima naslov");
+}
+
+
+
+4. Kreiranje i uklanjanje elemenata
+DOM omogućava dinamičko dodavanje i uklanjanje elemenata:
+document.createElement(): Kreira novi HTML element.
+
+Primer:
+const noviParagraf = document.createElement("p");
+noviParagraf.textContent = "Ovo je nov kreirani paragraf.";
+appendChild(): Dodaje element kao poslednje dete drugom elementu.
+
+Primer:
+const container = document.getElementById("container");
+container.appendChild(noviParagraf);
+insertBefore(): Umeće element pre određenog deteta u roditeljskom elementu.
+
+Primer:
+const naslov = document.getElementById("naslov");
+container.insertBefore(noviParagraf, naslov);
+removeChild(): Uklanja dete iz roditeljskog elementa.
+
+Primer:
+container.removeChild(naslov);
+replaceChild(): Zamenjuje dete drugim elementom.
+
+Primer:
+const noviNaslov = document.createElement("h1");
+noviNaslov.textContent = "Novi Naslov";
+container.replaceChild(noviNaslov, naslov);
+
+
+
+5. Manipulacija klasama
+DOM API nudi metode za rad sa klasama elemenata:
+classList.add(): Dodaje klasu elementu.
+
+Primer:
+naslov.classList.add("istaknuto");
+classList.remove(): Uklanja klasu iz elementa.
+
+Primer:
+naslov.classList.remove("istaknuto");
+classList.toggle(): Dodaje klasu ako nije prisutna, uklanja je ako jeste.
+
+Primer:
+naslov.classList.toggle("vidljivo");
+classList.contains(): Proverava da li element ima određenu klasu.
+
+Primer:
+if (naslov.classList.contains("istaknuto")) {
+  console.log("Naslov je istaknut.");
+}
+
+
+
+6. Rad sa događajima (Event handling)
+DOM omogućava slušanje događaja kao što su click, hover, focus, itd.
+addEventListener(): Dodaje slušalac događaja elementu.
+
+Primer:
+const dugme = document.querySelector("button");
+dugme.addEventListener("click", () => {
+  alert("Dugme je kliknuto!");
+});
+removeEventListener(): Uklanja slušalac događaja.
+
+Primer:
+function klikHandler() {
+  console.log("Klik!");
+}
+dugme.addEventListener("click", klikHandler);
+dugme.removeEventListener("click", klikHandler);
+
+
+
+7. Navigacija po DOM-u
+DOM API omogućava kretanje po čvorovima:
+
+parentNode: Vraća roditelja elementa.
+children: Vraća HTML kolekciju svih direktnih potomaka elementa.
+firstChild / lastChild: Vraća prvi ili poslednji čvor potomak.
+nextSibling / previousSibling: Omogućava navigaciju između susednih čvorova.
+
+Primer:
+const prviDiv = document.querySelector("div");
+console.log(prviDiv.parentNode); // Prikazuje roditelja div-a
+console.log(prviDiv.children); // Prikazuje sve direktne potomke div-a
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Strict Mode
+
+Strict Mode u JavaScript-u je poseban način izvršavanja koda koji uvodi strožija pravila kako bi pomogao u otkrivanju i izbegavanju potencijalnih grešaka i nedoslednosti. Kada je uključen, JavaScript interpreter primenjuje dodatna ograničenja i upozorava ili čak zaustavlja izvršavanje kod koji može biti problematičan ili teško za održavanje. Strict Mode se može koristiti u celoj datoteci ili samo u određenim funkcijama.
+
+
+
+Aktivacija Strict Mode-a
+Strict Mode se aktivira dodavanjem direktive "use strict"; na početku skripte ili funkcije.
+
+
+
+Globalni Strict Mode (za celu skriptu):
+
+"use strict";
+// Svi izrazi u ovom fajlu su pod strict mode-om
+var ime = "Pera";
+
+
+
+Lokalni Strict Mode (unutar funkcije):
+
+function mojFunkcija() {
+  "use strict";
+  // Samo ovaj deo funkcije je pod strict mode-om
+  let broj = 10;
+}
+
+
+
+⚠️ Napomena: "use strict"; je samo string literal, tako da ne utiče na ponašanje koda ako nije na početku skripte ili funkcije.
+
+
+
+Zašto koristiti Strict Mode?
+Strict Mode pomaže programerima u pisanju čistijeg, sigurnijeg i efikasnijeg koda. Uključivanje Strict Mode-a ima sledeće prednosti:
+
+Detektuje greške ranije: Označava kod koji bi u suprotnom bio neprimetan, što olakšava pronalaženje grešaka.
+Sprečava određene nejasne funkcionalnosti: Onemogućava upotrebu određenih loših praksi koje bi mogle izazvati probleme kasnije u kodu.
+Pomaže u optimizaciji koda: JavaScript interpreteri mogu bolje optimizovati kod koji ne koristi "opasne" funkcionalnosti.
+
+
+
+Pravila i ograničenja u Strict Mode-u
+
+
+Zabranjuje implicitne globalne varijable:
+Bez Strict Mode-a, greške u imenovanju varijabli mogu dovesti do kreiranja globalnih varijabli.
+Strict Mode to sprečava i zahteva da sve varijable budu eksplicitno deklarisane (let, const ili var).
+
+"use strict";
+ime = "Ana"; // ReferenceError: ime is not defined
+
+
+Zabranjuje redefinisanje svojstava eval i arguments:
+eval i arguments su rezervisane reči, i ne mogu se koristiti kao imena varijabli.
+
+"use strict";
+let arguments = 10; // SyntaxError: Unexpected eval or arguments in strict mode
+
+
+Sprečava duplikate parametara funkcije:
+Bez Strict Mode-a, funkcija može imati više parametara sa istim imenom, što može biti zbunjujuće.
+
+"use strict";
+function zbir(a, a) { // SyntaxError: Duplicate parameter name not allowed in this context
+  return a + a;
+}
+
+
+Zabranjuje this vrednost za undefined u funkcijama:
+U Strict Mode-u, this unutar funkcije koja nije pozvana kao metoda (npr. pozvana bez konteksta) postaje undefined umesto globalnog objekta.
+
+"use strict";
+function pokazatiThis() {
+  console.log(this); // undefined u strict mode-u, globalni objekat u non-strict mode-u
+}
+pokazatiThis();
+
+
+Sprečava korišćenje obrisanih varijabli:
+U strict mode-u nije dozvoljeno korišćenje delete operatora za uklanjanje varijabli, funkcija ili parametara.
+
+"use strict";
+let broj = 5;
+delete broj; // SyntaxError: Delete of an unqualified identifier in strict mode
+
+
+Zabranjuje funkcije u blokovima koda:
+U Strict Mode-u, definisanje funkcija unutar blokova (npr. if, while) može izazvati greške u nekim JavaScript verzijama.
+
+"use strict";
+if (true) {
+  function test() {} // SyntaxError u nekim implementacijama
+}
+
+
+Zabranjuje oktalne (osamne) literale:
+U Strict Mode-u nije dozvoljeno korišćenje oktalnih literala sa prefiksom 0 (kao 064 za 52 u dekadnom sistemu).
+
+"use strict";
+let oktalniBroj = 064; // SyntaxError: Octal literals are not allowed in strict mode
+
+
+Zaštita od nesigurnog korišćenja with izraza
+Strict Mode zabranjuje upotrebu with izjave, koja može otežati razumevanje skopa (scope) varijabli.
+
+"use strict";
+with (Math) { // SyntaxError: Strict mode code may not include a with statement
+  console.log(cos(2));
+}
+
+
+Kada koristiti Strict Mode?
+Strict Mode se često koristi na početku JavaScript fajlova kako bi osigurao bolje performanse, lakšu detekciju grešaka i opštu sigurnost koda. Može se primeniti na celokupan projekat ili na specifične funkcije gde je potrebna dodatna sigurnost. U modernom razvoju, preporučuje se korišćenje Strict Mode-a kao podrazumevane prakse.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Ključna reč THIS
+
+1. this u metodi (in a method)
+Kada se this koristi u metodi objekta (funkciji koja je definisana unutar objekta), this obično referiše na objekat kojem metoda pripada. 
+
+Primer:
+const person = {
+  name: "Ana",
+  sayHello: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+person.sayHello(); // Hello, my name is Ana
+
+Ovde this referiše na objekat person, pa this.name daje "Ana".
+
+
+
+2. this u funkciji (in a function)
+Kada se this koristi unutar obične funkcije, zavisi od toga kako je funkcija pozvana. Kada se funkcija pozove bez pripadnosti nekom objektu (kao "standalone" funkcija), this će referisati na globalni objekat u ne-strogoj (non-strict) režiji ili undefined u strogoj režiji (strict mode).
+
+Primer:
+function showThis() {
+  console.log(this);
+}
+showThis(); // U 'non-strict' modu: globalni objekat (window u browser-u); u 'strict' modu: undefined
+
+Ako je funkcija pozvana direktno, van objekta, this neće imati specifičnu referencu na objekat.
+
+
+
+3. this kada se koristi samostalno (using it alone)
+Kada je this korišćen samostalno, van bilo koje funkcije ili objekta, u ne-strogoj režiji (non-strict mode) referiše na globalni objekat (kao što je window u pretraživaču). U strogoj režiji (strict mode), this će biti undefined.
+
+Primer:
+console.log(this); // U browser-u, ovo je window objekat
+
+Ako je kod pisan u strogoj režiji ("use strict"), this samostalno će biti undefined.
+
+
+
+4. this u event handlerima (in event handlers)
+Kada je this korišćen u event handlerima (npr. kada se koristi sa addEventListener metodom), this obično referiše na element koji je generisao događaj.
+
+Primer:
+document.querySelector("button").addEventListener("click", function() {
+  console.log(this); // <button> element na koji je kliknuto
+});
+
+U ovom primeru, this referiše na <button> element, jer je on generisao događaj klik.
+
+
+
+5. this u streličastim funkcijama (in arrow functions)
+Streličaste funkcije (arrow functions) se ponašaju drugačije kada je u pitanju this. One ne kreiraju sopstveni kontekst za this, već zadržavaju vrednost this iz okruženja u kojem su definisane (poznato kao "lexical scoping").
+
+Primer:
+const obj = {
+  name: "Ana",
+  greet: function() {
+    const arrowFunc = () => {
+      console.log(this.name);
+    };
+    arrowFunc();
+  }
+};
+
+obj.greet(); // Ana
+
+Ovde this unutar arrowFunc referiše na obj, jer streličaste funkcije zadržavaju this vrednost iz konteksta u kojem su kreirane.
+
+
+
+Funkcijsko pozajmljivanje (Function Borrowing)
+Ova tehnika omogućava da pozajmimo metodu jednog objekta i koristimo je u drugom objektu. Obično se koristi sa call ili apply metodama.
+
+Primer:
+const person1 = {
+  name: "Ana",
+  sayHello: function() {
+    console.log("Hello, " + this.name);
+  }
+};
+
+const person2 = { name: "Marko" };
+
+person1.sayHello.call(person2); // Hello, Marko
+Ovde koristimo call da "pozajmimo" metodu sayHello iz person1 i primenimo je na person2.
+
+
+
+Eksplicitno vezivanje (Explicit Binding)
+Eksplicitno vezivanje se odnosi na korišćenje metoda call, apply i bind da bismo eksplicitno podesili vrednost this.
+
+call: Poziva funkciju sa određenim this kontekstom i nizom argumenata.
+
+Primer:
+function greet(greeting) {
+  console.log(greeting + ", " + this.name);
+}
+
+const person = { name: "Ana" };
+greet.call(person, "Hello"); // Hello, Ana
+
+
+apply: Slično kao call, ali argumente prima kao niz.
+
+Primer:
+greet.apply(person, ["Hi"]); // Hi, Ana
+
+
+bind: Vraća novu funkciju sa trajno vezanim this kontekstom.
+
+Primer:
+const boundGreet = greet.bind(person);
+boundGreet("Good day"); // Good day, Ana
+
+
+Zaključak
+this unutar metoda u objektima referiše na sam objekat.
+U običnim funkcijama this može biti globalni objekat ili undefined.
+U event handlerima, this obično referiše na DOM element koji je okidač.
+Streličaste funkcije zadržavaju vrednost this iz okruženja gde su definisane.
+call, apply, i bind se koriste za eksplicitno određivanje vrednosti this.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Asinhroni JS
+
+Asinhroni JavaScript nam omogućava da izvršavamo dugotrajne zadatke (kao što su HTTP zahtevi, učitavanje podataka ili čekanje na korisničke akcije) bez blokiranja glavnog toka programa. Umesto da kod čeka na zadatak da se završi, može odmah preći na sledeće zadatke.
+
+Da bi ovo bilo moguće, JavaScript koristi event loop i asinhrone metode kao što su callbacks, promises, i async/await.
+
+1. Event Loop (Event Loop)
+Event Loop (petlja događaja) je mehanizam u JavaScript-u koji omogućava upravljanje asinhronim zadacima. Kada se asinhroni zadatak izvršava (npr. HTTP zahtev), JavaScript šalje taj zadatak u pozadinu, dok ostatak koda nastavlja sa radom. Kada se zadatak završi, event loop proverava da li je JavaScript-ov call stack prazan. Ako jeste, onda smešta rezultat izvršenja u task queue (red zadataka) i izvršava funkciju koja čeka u redu.
+
+Primer:
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Async operation");
+}, 1000);
+
+console.log("End");
+// Ispis:
+// Start
+// End
+// (nakon 1 sekunde) Async operation
+
+Ovde setTimeout funkcija kreira asinhroni zadatak koji se izvršava u pozadini. Event loop omogućava JavaScript-u da nastavi sa izvršavanjem narednih linija koda dok taj zadatak čeka na završetak.
+
+
+
+2. setTimeout i setInterval
+
+setTimeout: Ova funkcija omogućava da se odloži izvršavanje određenog koda nakon specificiranog vremena (u milisekundama). Kada se postavi, setTimeout šalje zadatak u pozadinu i JavaScript nastavlja sa izvršavanjem ostalih linija.
+
+Primer:
+setTimeout(() => {
+  console.log("Izvršava se nakon 2 sekunde");
+}, 2000);
+
+
+setInterval: Ova funkcija izvršava zadati kod u određenim vremenskim intervalima (u milisekundama), sve dok se interval ne prekine pozivom clearInterval.
+
+Primer:
+const intervalId = setInterval(() => {
+  console.log("Ovo se prikazuje svakih 2 sekunde");
+}, 2000);
+
+// Prekinuti interval
+setTimeout(() => clearInterval(intervalId), 10000); // Prekida interval nakon 10 sekundi
+Ove funkcije su odlične za odloženo ili ponavljajuće izvršavanje, ali mogu dovesti do tzv. callback hell situacije ako se koriste za kompleksne asinhrone operacije.
+
+
+
+4. Callback funkcije (Callbacks)
+Callback je funkcija koja se prosleđuje kao argument drugoj funkciji, a zatim se poziva nakon što se određeni zadatak završi. Callback funkcije su prvi način rada sa asinhronim zadacima u JavaScript-u, ali mogu dovesti do kompleksnog i teško čitljivog koda kada se koristi puno "zavisnih" asinhronih poziva - ovo se zove callback hell.
+
+Primer:
+function fetchData(callback) {
+  setTimeout(() => {
+    console.log("Podaci preuzeti");
+    callback();
+  }, 1000);
+}
+
+fetchData(() => {
+  console.log("Zadatak završen!");
+});
+// Ispis:
+// Podaci preuzeti
+// Zadatak završen!
+U složenim slučajevima, sa više ugneždenih callback funkcija, kod može postati haotičan i težak za održavanje.
+
+
+
+5. Callback Hell (Callback Hell)
+Callback Hell se javlja kada imamo više ugneždenih callback funkcija, što vodi ka kodu koji je teško čitljiv i održavati. To se često dešava kada treba da izvršimo niz asinhronih zadataka u tačno određenom redosledu.
+
+Primer:
+doTask1(() => {
+  doTask2(() => {
+    doTask3(() => {
+      doTask4(() => {
+        console.log("Sve zadaci završeni!");
+      });
+    });
+  });
+});
+Kod postaje "stepeničast" i komplikovan, što može voditi ka greškama. Promises i async/await su uvedeni da bi se izbegao callback hell.
+
+
+
+6. Promises (Promises)
+Promises su objekti koji predstavljaju vrednost koja je dostupna sada, kasnije ili nikada (ako dođe do greške). Oni poboljšavaju kod tako što omogućavaju da se rad sa asinhronim operacijama piše na način koji je linearniji i lakši za čitanje, za razliku od ugnježdenih callback funkcija.
+
+Promise ima tri stanja:
+
+Pending: Započet, ali nije završen
+Fulfilled: Završeno uspešno
+Rejected: Došlo je do greške
+Evo primera:
+
+Primer:
+let myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Podaci preuzeti!");
+  }, 1000);
+});
+
+myPromise.then((message) => {
+  console.log(message);
+}).catch((error) => {
+  console.log("Došlo je do greške:", error);
+});
+
+// Ispis nakon 1 sekunde: Podaci preuzeti!
+Korišćenjem then i catch metoda, možemo lako uhvatiti rezultate ili greške iz asinhronih operacija, što pomaže u izbegavanju callback hell-a.
+
+
+
+7. async i await
+async i await su dodati u JavaScript kao jednostavniji način za rad sa Promise-ima. Koristeći async/await, možemo pisati asinhroni kod koji izgleda kao sinhroni, što čini kod lakšim za razumevanje i održavanje.
+
+async: Kada se stavi ispred funkcije, označava da ta funkcija vraća Promise.
+await: Pauzira izvršavanje unutar async funkcije sve dok se Promise ne završi, pa možemo da koristimo rezultat kao da je sinhroni.
+
+Primer:
+async function fetchData() {
+  try {
+    const data = await myPromise; // Čeka da se myPromise završi
+    console.log(data);
+  } catch (error) {
+    console.log("Došlo je do greške:", error);
+  }
+}
+
+fetchData(); // Ispis: Podaci preuzeti!
+Kombinacija async i await omogućava da radimo sa asinhronim operacijama bez ugnježdenih then-ova, što olakšava čitanje koda.
+
+Sumiranje
+Event Loop: Upravlja asinhronim zadacima, proverava call stack i task queue.
+setTimeout/setInterval: Funkcije za odlaganje i ponavljanje zadataka.
+Callbacks: Prvi način rada sa asinhronim kodom, može voditi ka callback hell-u.
+Callback Hell: Problem ugnježdenih callback funkcija, koje čine kod nečitljivim.
+Promises: Objekti koji pojednostavljuju rad sa asinhronim kodom, izbegavajući callback hell.
+async/await: Još čitljiviji način za rad sa Promise-ima, koristi se za čitljiviji asinhroni kod.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Rad sa API-jevima
+
+API (Application Programming Interface) je interfejs koji omogućava komunikaciju između različitih softverskih aplikacija. Kada radimo sa API-jevima u JavaScript-u, najčešće koristimo REST API koji radi preko HTTP protokola i omogućava nam da:
+
+Pribavljamo podatke sa servera (GET zahtevi),
+Šaljemo podatke ka serveru (POST, PUT, DELETE zahtevi),
+Ažuriramo i brišemo podatke.
+
+JavaScript nudi dva glavna alata za slanje i primanje HTTP zahteva:
+XMLHttpRequest
+Fetch API
+
+
+Ova dva alata omogućavaju da naš kod komunicira sa serverom bez potrebe za ponovnim učitavanjem stranice.
+
+1. XMLHttpRequest (XMLHttpRequest)
+XMLHttpRequest (ili skraćeno XHR) je stariji način za rad sa asinhronim HTTP zahtevima u JavaScript-u. Uveden je ranih 2000-ih i postao je popularan zbog omogućavanja AJAX-a (Asynchronous JavaScript and XML) koji omogućava asinhrone zahteve za ažuriranje delova veb stranice bez potrebe za ponovnim učitavanjem cele stranice.
+
+Primer:
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    const data = JSON.parse(xhr.responseText);
+    console.log(data);
+  }
+};
+
+xhr.send();
+
+Objašnjenje koda:
+
+xhr.open(method, url, async): Priprema zahtev sa metodom (GET, POST, itd.), URL-om i asinhronom opcijom (true znači asinhrono).
+xhr.onreadystatechange: Dodajemo funkciju koja se izvršava svaki put kada se readyState promeni.
+xhr.readyState: Ovo stanje pokazuje fazu zahteva (4 znači da je zahtev završen).
+xhr.status: Kod statusa HTTP odgovora (200 označava uspešan zahtev).
+xhr.responseText: Sadrži odgovor servera kao string, koji možemo parsirati u JSON format.
+
+Iako je XMLHttpRequest moćan, ima nekoliko nedostataka:
+Težak je za korišćenje zbog komplikovanog API-ja.
+Ima ograničenu podršku za moderne funkcionalnosti kao što su Promise objekti, što može dovesti do kompleksnog koda.
+
+
+
+2. Fetch API (Fetch)
+Fetch API je moderniji i jednostavniji način za slanje HTTP zahteva u JavaScript-u. Uveden je kako bi pojednostavio rad sa asinhronim zahtevima i zamenio XMLHttpRequest. Fetch API koristi Promise objekte, što olakšava rad sa asinhronim kodom i omogućava lakšu integraciju sa async i await.
+
+
+Osnovni primer korišćenja Fetch API-ja za preuzimanje podataka:
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Greška u zahtevu");
+    }
+    return response.json(); // Konvertuje odgovor u JSON format
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error("Došlo je do greške:", error);
+  });
+
+Objašnjenje koda:
+
+fetch(url): Inicira HTTP zahtev ka zadatom URL-u i vraća Promise objekat.
+response.ok: Proverava da li je odgovor uspešan (status 200).
+response.json(): Konvertuje telo odgovora u JSON format, vraća takođe Promise.
+.then(): Uspostavlja obradu za uspešan zahtev i parsirane podatke.
+.catch(): Hvata greške ako zahtev ne uspe.
+Fetch API podržava različite HTTP metode (GET, POST, PUT, DELETE itd.) kroz opcije koje možemo navesti u drugom argumentu fetch funkcije.
+
+
+Primer Fetch API-ja sa POST zahtevom:
+
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    title: "Naslov posta",
+    body: "Sadržaj posta",
+    userId: 1,
+  })
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Greška:", error));
+U ovom primeru, šaljemo POST zahtev sa JSON telom. Metoda POST se koristi za kreiranje novih resursa, dok Content-Type specificira da se podaci šalju kao JSON.
+
+
+Prednosti i Mane XMLHttpRequest i Fetch API
+
+XMLHttpRequest										Fetch API
+
+Prednosti										Prednosti
+
+- Široko podržan u starijim browserima							- Moderniji API sa obećanjima (Promises)
+- Omogućava pristup specifičnim funkcijama kao što su onprogress i abort		- Lako integrisanje sa async/await
+											- Jednostavnija sintaksa
+
+Nedostaci										Nedostaci
+- Kompleksna sintaksa									- Ne podržava automatsko otkazivanje zahteva (bez dodatnog koda)
+- Nema ugrađenu podršku za Promise							- Manja podrška u starijim browserima
+
+Fetch API je lakši za upotrebu i pogodan za savremene JavaScript aplikacije. Međutim, ako vam je potrebna podrška za starije browsere ili posebne funkcionalnosti (poput napretka učitavanja sa onprogress), XMLHttpRequest može biti bolji izbor.
+
+Sumiranje
+XMLHttpRequest je stariji način za rad sa asinhronim HTTP zahtevima u JavaScript-u. Iako funkcionalan, manje je čitljiv zbog složene sintakse i nedostatka Promise podrške.
+Fetch API je moderniji način za slanje HTTP zahteva koji koristi Promise objekte i omogućava lakše korišćenje sa async/await. Čini asinhroni kod čistijim i čitljivijim.
+Kada je u pitanju rad sa API-jevima u modernom JavaScript-u, Fetch API je preferirani izbor zbog svoje jednostavnosti i čitljivosti, osim ako specifični zahtevi ne zahtevaju korišćenje XMLHttpRequest-a.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Klase
+
+Šta su klase?
+Klase su specijalne funkcije u JavaScript-u koje nam omogućavaju da definišemo šablon za stvaranje objekata sa određenim svojstvima i metodama. One su uvedene u ES6 (ECMAScript 2015) i služe za pojednostavljenje rada sa objektno orijentisanim programiranjem (OOP) u JavaScript-u.
+
+Pre ES6, JavaScript nije imao sintaksu za klase, pa su se konstruktorske funkcije koristile za kreiranje objekata. Iako su klase u JavaScript-u zapravo samo "sintaksni šećer" (syntax sugar) za rad sa konstruktorima, one olakšavaju rad i čine kod čitljivijim.
+
+
+
+Osnovna sintaksa klase
+Osnovni element svake klase u JavaScript-u je ključna reč class. U klasi definišemo:
+
+Konstruktor - metoda koja se izvršava kada se kreira novi objekat.
+Metode - funkcije koje su dostupne objektima te klase.
+
+Primer osnovne klase:
+class Person {
+  constructor(name, age) {
+    this.name = name; // svojstvo
+    this.age = age;   // svojstvo
+  }
+
+  // Metoda
+  greet() {
+    console.log(`Zdravo, moje ime je ${this.name} i imam ${this.age} godina.`);
+  }
+}
+
+// Kreiranje objekta korišćenjem klase
+const person1 = new Person("Marko", 25);
+person1.greet(); // Ispisuje: Zdravo, moje ime je Marko i imam 25 godina.
+
+Objašnjenje koda:
+class Person: Definiše klasu Person koja predstavlja osobu.
+constructor: Konstruktor se koristi za inicijalizaciju svojstava (name i age) kada se kreira novi objekat klase.
+Metoda greet: Metoda koja ispisuje poruku pozdravljanja. Pristupa svojstvima objekta korišćenjem ključne reči this.
+Konstruktor (constructor)
+Konstruktor je posebna metoda koja se poziva automatski kada kreiramo novi objekat klase. U njemu obično inicijalizujemo osnovna svojstva objekta.
+
+
+Konstruktor može imati parametre kako bi objekat mogao biti kreiran sa određenim vrednostima.
+Unutar konstruktora, this se odnosi na novi objekat koji se kreira.
+Ako klasa nema definisan konstruktor, JavaScript koristi podrazumevani (prazan) konstruktor.
+
+Primer konstruktora bez parametara:
+
+class Car {
+  constructor() {
+    this.brand = "Toyota";
+    this.year = 2020;
+  }
+}
+
+const myCar = new Car();
+console.log(myCar.brand); // Ispisuje: Toyota
+
+
+
+Nasleđivanje klasa (extends i super)
+Nasleđivanje je koncept u OOP-u koji omogućava jednoj klasi da preuzme (nasledi) svojstva i metode druge klase. U JavaScript-u koristimo ključnu reč extends da bismo stvorili klasu koja nasleđuje drugu klasu.
+
+super: Koristimo super u konstruktoru izvedene klase da pozovemo konstruktor nadklase i inicijalizujemo nasledjena svojstva.
+
+Primer nasleđivanja klasa:
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} pravi zvuk.`);
+  }
+}
+
+// Pas nasleđuje klasu Animal
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Poziva konstruktor nadklase
+    this.breed = breed;
+  }
+
+  speak() {
+    console.log(`${this.name}, pas rase ${this.breed}, laje.`);
+  }
+}
+
+const myDog = new Dog("Bobby", "Labrador");
+myDog.speak(); // Ispisuje: Bobby, pas rase Labrador, laje.
+
+Objašnjenje koda:
+class Dog extends Animal: Klasa Dog nasleđuje klasu Animal, što znači da može koristiti sve metode i svojstva Animal klase.
+super(name): Poziva konstruktor nadklase Animal i prosleđuje vrednost name.
+Overridovanje metode speak: Klasa Dog ima sopstvenu verziju metode speak koja zamenjuje metodu iz Animal klase (overriding).
+
+
+
+Statičke metode (static)
+Statičke metode su metode koje pripadaju samoj klasi, a ne instancama te klase. One se pozivaju direktno preko klase, bez potrebe za kreiranjem novog objekta.
+
+Primer statičke metode:
+class MathUtils {
+  static add(a, b) {
+    return a + b;
+  }
+}
+
+console.log(MathUtils.add(5, 3)); // Ispisuje: 8
+
+Objašnjenje koda:
+static add: Definiše statičku metodu add koja pripada klasi MathUtils, i poziva se direktno preko naziva klase.
+
+
+
+Getteri i setteri
+Getteri i setteri su specijalne metode koje omogućavaju kontrolisan pristup svojstvima objekta. get metoda se koristi za pristup vrednosti svojstva, dok set metoda omogućava modifikaciju svojstva sa dodatnom logikom.
+
+Primer sa getterom i setterom:
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  get area() {
+    return this.width * this.height;
+  }
+
+  set area(value) {
+    throw new Error("Area is a calculated property, it can't be set directly.");
+  }
+}
+
+const rect = new Rectangle(5, 10);
+console.log(rect.area); // Ispisuje: 50
+rect.area = 100;        // Greška: "Area is a calculated property, it can't be set directly."
+
+Objašnjenje koda:
+get area(): Getter za area svojstvo, koji izračunava površinu (width * height) kada mu se pristupi.
+set area(value): Pokušaj da se direktno postavi area svojstvo baca grešku jer je to svojstvo samo za čitanje.
+
+
+
+Privatna svojstva i metode (# sintaksa)
+U modernom JavaScript-u (ES2022), privatna svojstva i metode klase označavaju se znakom #. Ova svojstva i metode nisu dostupni izvan klase, što povećava sigurnost podataka.
+
+Primer sa privatnim svojstvima:
+class BankAccount {
+  #balance; // privatno svojstvo
+
+  constructor(initialBalance) {
+    this.#balance = initialBalance;
+  }
+
+  deposit(amount) {
+    this.#balance += amount;
+  }
+
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const account = new BankAccount(100);
+account.deposit(50);
+console.log(account.getBalance()); // Ispisuje: 150
+console.log(account.#balance);     // Greška: privatno svojstvo nije dostupno izvan klase
+
+Objašnjenje koda:
+#balance: Privatno svojstvo balance koje nije dostupno izvan klase BankAccount.
+Privatna svojstva čuvaju podatke sigurnim i omogućavaju bolju enkapsulaciju.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Iteratori i generatori
+
+Iteratori
+
+Šta su Iteratori?
+Iterator je objekt koji omogućava sekvencijalno prolazak kroz skup podataka (kao što je niz ili objekat). Svaki iterator ima metodu next(), koja vraća sledeći element u sekvenci. next() metoda vraća objekat sa dve ključne vrednosti:
+
+value: trenutna vrednost
+done: Boolean vrednost koja označava da li je iteracija završena (true znači da više nema elemenata za iteriranje).
+
+
+Kako kreirati Iterator?
+Iterator može biti kreiran ručno. Evo jednostavnog primera iteratora koji prolazi kroz niz brojeva:
+function createIterator(array) {
+  let index = 0;
+  
+  return {
+    next: function() {
+      if (index < array.length) {
+        return { value: array[index++], done: false };
+      } else {
+        return { done: true };
+      }
+    }
+  };
+}
+
+const myIterator = createIterator([10, 20, 30]);
+
+console.log(myIterator.next()); // { value: 10, done: false }
+console.log(myIterator.next()); // { value: 20, done: false }
+console.log(myIterator.next()); // { value: 30, done: false }
+console.log(myIterator.next()); // { done: true }
+
+Objašnjenje koda:
+Funkcija createIterator kreira iterator koji prima niz kao argument i vraća objekat sa metodom next.
+Svaki poziv next vraća sledeći element iz niza sve dok niz ne bude iscrpljen, posle čega done postaje true.
+
+
+Symbol.iterator
+U JavaScript-u, iterabilni objekti su objekti koji implementiraju metodu sa ključnim simbolom Symbol.iterator. Ovaj simbol omogućava objektima da budu kompatibilni sa for...of petljom i drugim iterabilnim alatima.
+
+Primera:
+const myArray = [1, 2, 3];
+const iterator = myArray[Symbol.iterator]();
+console.log(iterator.next()); // { value: 1, done: false }
+console.log(iterator.next()); // { value: 2, done: false }
+console.log(iterator.next()); // { value: 3, done: false }
+console.log(iterator.next()); // { done: true }
+
+
+for...of se može koristiti sa bilo kojim objektom koji ima Symbol.iterator:
+for (let value of myArray) {
+  console.log(value); // Ispisuje 1, zatim 2, pa 3
+}
+
+
+
+Generatori
+Šta su Generatori?
+Generatori su specijalne funkcije koje omogućavaju kontrolisano kreiranje iteratora i pauziranje izvršavanja do sledećeg poziva. Oni koriste ključnu reč function* (zvezdica označava generator funkciju) i yield ključnu reč za pauziranje funkcije i vraćanje vrednosti.
+
+Generatori se razlikuju od regularnih funkcija jer:
+
+Pauziraju i nastavljaju svoje izvršavanje.
+Vraćaju iterator, sa next() metodom.
+
+
+Sintaksa Generatora
+Evo osnovnog primera generator funkcije:
+
+function* simpleGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const generator = simpleGenerator();
+
+console.log(generator.next()); // { value: 1, done: false }
+console.log(generator.next()); // { value: 2, done: false }
+console.log(generator.next()); // { value: 3, done: false }
+console.log(generator.next()); // { done: true }
+
+Objašnjenje koda:
+yield se koristi za pauziranje generatora i vraćanje trenutne vrednosti.
+Svaki sledeći poziv next() nastavlja izvršavanje od sledeće yield naredbe.
+
+
+Primer korišćenja Generatora
+Generator može biti veoma koristan kada želimo generisati sekvencu vrednosti po potrebi, kao što su beskonačne sekvence ili složeni nizovi podataka.
+
+Primer beskonačnog generatora za brojeve:
+
+function* infiniteNumbers() {
+  let i = 0;
+  while (true) {
+    yield i++;
+  }
+}
+
+const numbers = infiniteNumbers();
+
+console.log(numbers.next().value); // 0
+console.log(numbers.next().value); // 1
+console.log(numbers.next().value); // 2
+// i tako dalje...
+Ovde generator nikada ne završava (done nikada nije true) jer while (true) stvara beskonačnu petlju. Generator će nastaviti da generiše sledeće brojeve sve dok ga pozivamo.
+
+
+Slanje vrednosti generatoru (yield i next() sa argumentima)
+Možemo poslati vrednost generatoru koristeći next(value), gde value postaje rezultat prethodnog yield izraza u generatoru.
+
+function* customGenerator() {
+  let result = yield "Unesite prvi broj";
+  console.log(`Rezultat posle prvog yield: ${result}`);
+  result = yield result * 2;
+  console.log(`Rezultat posle drugog yield: ${result}`);
+}
+
+const gen = customGenerator();
+
+console.log(gen.next());        // { value: "Unesite prvi broj", done: false }
+console.log(gen.next(10));      // { value: 20, done: false }, Ispisuje: Rezultat posle prvog yield: 10
+console.log(gen.next(50));      // { value: undefined, done: true }, Ispisuje: Rezultat posle drugog yield: 50
+Objašnjenje koda:
+
+Prvi yield pauzira generator i vraća "Unesite prvi broj".
+gen.next(10) prosleđuje vrednost 10, koja se koristi kao rezultat prvog yield, pa se ispisuje "Rezultat posle prvog yield: 10".
+
+
+Generatori i iteracija
+Generator funkcije se mogu koristiti direktno u for...of petlji:
+
+function* countDown() {
+  yield 3;
+  yield 2;
+  yield 1;
+  yield "Kreni!";
+}
+
+for (let value of countDown()) {
+  console.log(value);
+}
+
+// Ispisuje:
+// 3
+// 2
+// 1
+// Kreni!
+Ovo je sjajan način da se kroz generator funkciju prođe, bez potrebe za ručnim pozivanjem next().
+
+
+Kombinacija Iteratora i Generatora
+Zbog prirode generatora, oni su idealni za pravljenje prilagođenih iteratora. Na primer, možemo kreirati generator koji generiše samo parne brojeve unutar nekog opsega:
+
+function* evenNumbers(limit) {
+  for (let i = 0; i <= limit; i += 2) {
+    yield i;
+  }
+}
+
+const evenGen = evenNumbers(10);
+
+console.log(evenGen.next().value); // 0
+console.log(evenGen.next().value); // 2
+console.log(evenGen.next().value); // 4
+console.log(evenGen.next().value); // 6
+console.log(evenGen.next().value); // 8
+console.log(evenGen.next().value); // 10
+console.log(evenGen.next().done);  // true
+
+
+
+Zašto koristiti Iteratore i Generatore?
+Iteratori i generatori su korisni za:
+Odloženje generisanja podataka: Generator proizvodi vrednosti samo kada su potrebne, što štedi memoriju.
+Pristup velikim ili beskonačnim sekvencama podataka: Na primer, generatori omogućavaju iteraciju kroz beskonačne sekvence bez stvaranja ogromnih struktura podataka.
+Jednostavnija kontrola toka programa: yield omogućava da pauziramo funkciju i nastavimo kasnije, što može biti korisno u složenim algoritmima.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Moduli
+
+Moduli su blokovi koda koji su međusobno izolovani i mogu se lako ponovo koristiti i deliti između različitih delova programa. Moduli omogućavaju da se kod razdeli u manje, lakše održive delove. Ovaj pristup olakšava organizaciju, održavanje i ponovno korišćenje koda.
+
+JavaScript nije imao ugrađenu podršku za module u svom početku, pa su tokom vremena razvijeni različiti standardi za modularizaciju koda. Dva najvažnija su CommonJS i ESM.
+
+
+
+
+CommonJS
+CommonJS je prvi popularan modulski sistem u JavaScriptu. Razvijen je za rad sa Node.js, server-side okruženjem za JavaScript.
+
+Karakteristike:
+Sintaksa za uvoz i izvoz: U CommonJS-u koristimo require za uvoz i module.exports za izvoz modula.
+Sinhroni uvoz: Moduli se učitavaju sinhrono, što znači da se uvozi jedan modul po jedan, redom. Ovo je savršeno za server-side okruženje, ali može biti problematično za browser (klijentske) aplikacije.
+Koristi se najčešće u Node.js okruženju.
+
+Primer koda: 
+
+modul.js
+
+// Exportovanje pomoću module.exports
+const pozdrav = "Zdravo iz CommonJS modula!";
+module.exports = pozdrav;
+
+app.js
+
+// Uvoz pomoću require
+const pozdrav = require('./modul');
+console.log(pozdrav); // "Zdravo iz CommonJS modula!"
+
+CommonJS moduli su standard za Node.js aplikacije, ali imaju određene limitacije u radu sa browserima.
+
+
+
+ECMAScript Modules (ESM)
+ECMAScript Modules (ESM) su standardizovani moduli koji su uvedeni sa ES6 (2015) verzijom JavaScript-a. ESM podržava moderne JavaScript browser-e i Node.js okruženje.
+
+Karakteristike:
+Sintaksa za uvoz i izvoz: ESM koristi import za uvoz i export za izvoz. Ova sintaksa je čista i jednostavna.
+Asinhroni uvoz: U browseru se ESM moduli učitavaju asinhrono, što je pogodnije za aplikacije koje rade u klijentima (na primer, u web browserima).
+Podrška u browseru i Node.js: Većina modernih browser-a podržava ESM, a od verzije 12, Node.js takođe ima nativnu podršku za ESM.
+
+Primer koda:
+modul.js
+
+// Exportovanje pomoću ESM export
+export const pozdrav = "Zdravo iz ESM modula!";
+
+app.js
+
+// Uvoz pomoću ESM import
+import { pozdrav } from './modul.js';
+console.log(pozdrav); // "Zdravo iz ESM modula!"
+
+
+Da bi ESM radio u Node.js okruženju, potrebno je postaviti "type": "module" u package.json fajlu.
+
+{
+  "type": "module"
+}
+
+
+
+Kada koristiti CommonJS a kada ESM?
+
+CommonJS je odličan za rad u Node.js okruženju, pogotovo u starijim projektima ili kada aplikacija koristi mnogo npm paketa koji su zasnovani na CommonJS-u.
+ESM je standard za moderne aplikacije, naročito one koje rade u browseru ili koje žele potpunu interoperabilnost sa svim modernim JavaScript funkcionalnostima.
+
+Zaključak
+CommonJS: Stariji, koristi require i module.exports, podržava Node.js ali je manje fleksibilan za browser aplikacije.
+ESM: Moderni standard, koristi import i export, podržan u browserima i Node.js, omogućava asinhroni uvoz.
+Kada razvijate novi projekat u JavaScript-u, uvek je preporučljivo koristiti ESM jer je to budućnost JavaScript modula i daje bolju podršku u modernim okruženjima.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Upravljanje memorijom (Memory Management)
+
+Upravljanje memorijom podrazumeva kako aplikacija koristi memoriju tokom izvršavanja. U JavaScriptu, upravljanje memorijom uglavnom obavlja sam JavaScript engine (kao što je V8 u Chrome-u i Node.js-u). Ovo automatsko upravljanje memorijom omogućava programerima da se fokusiraju na logiku aplikacije, dok engine obavlja teške zadatke poput praćenja zauzete memorije i njene optimizacije.
+
+
+
+Memory Lifecycle (Životni ciklus memorije)
+Svaka promenljiva ili objekat u JavaScript-u prolazi kroz sledeće faze u svom životnom ciklusu:
+
+Alokacija memorije: Kada se kreira promenljiva ili objekat, memorija se rezerviše za taj entitet. Na primer, deklaracija let x = 10; rezerviše memoriju za promenljivu x i postavlja njen sadržaj na 10.
+
+Korišćenje memorije: Tokom izvršavanja koda, memorija se koristi za pristup promenljivama, objektima i funkcijama. Promenljive i objekti koriste memoriju sve dok su u opsegu (scope-u) i dok postoje reference na njih.
+
+Oslobađanje memorije: Kada promenljiva ili objekat više nisu potrebni, memorija koju zauzimaju postaje beskorisna i treba da se oslobodi. U JavaScript-u, ovaj proces se obavlja automatski putem Garbage Collection mehanizma, ali razumevanje kada i kako se memorija oslobađa može pomoći u sprečavanju problema poput curenja memorije.
+
+
+
+Garbage Collection (Sakupljanje smeća)
+Garbage Collection (GC) je proces automatskog oslobađanja memorije koju zauzimaju objekti i promenljive koji više nisu dostupni. JavaScript koristi algoritam "mark-and-sweep" za garbage collection, što znači da označava sve objekte na koje više nema referenci i uklanja ih iz memorije.
+
+Kako funkcioniše Garbage Collection?
+Označavanje (Marking): JavaScript engine prolazi kroz sve objekte u memoriji i označava one na koje postoji referenca (tj. koji su dostupni iz nekog drugog dela koda).
+Čišćenje (Sweeping): Svi objekti koji nisu označeni kao dostupni se brišu, a njihova memorija se oslobađa.
+
+
+Prednosti i ograničenja Garbage Collection-a
+Prednost: GC oslobađa programere od ručnog oslobađanja memorije, što olakšava rad i smanjuje šanse za greške.
+Ograničenje: Automatski GC može dovesti do malih kašnjenja, poznatih kao "GC pause", kada engine proverava i oslobađa memoriju. U većini slučajeva, ovo nije primetno, ali kod aplikacija sa visokim performansama (npr. igrice) može izazvati probleme.
+
+
+
+Problemi s curenjem memorije
+Iako JavaScript ima automatski GC, neki obrasci mogu dovesti do curenja memorije (memory leaks), što se dešava kada se memorija ne oslobađa pravilno, iako više nije potrebna. Na primer:
+
+Neosetljivi closures: Kada funkcije zadržavaju reference na promenljive koje su van opsega.
+Globalne promenljive: Neoslobodive globalne promenljive ostaju dostupne sve vreme tokom izvršavanja programa.
+Neiskorišćeni DOM elementi: Referenciranje DOM elemenata koji su uklonjeni iz DOM-a, ali još uvek postoje u memoriji.
+
+Zaključak
+Memory Management: JavaScript engine automatski upravlja memorijom, ali je važno razumeti osnovne principe kako bi se pisao efikasan kod.
+Memory Lifecycle: Svaka promenljiva ili objekat prolazi kroz faze alokacije, korišćenja i oslobađanja.
+Garbage Collection: Automatski proces u JavaScript-u koji uklanja objekte na koje više nema referenci, ali je važno paziti na obrasce koji mogu izazvati curenje memorije.
+Razumevanje upravljanja memorijom može značajno poboljšati performanse aplikacija, pogotovo kod većih i složenijih projekata.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- DevTools u pretraživaču
+
+Browser DevTools (alati za razvoj u browser-u) se mogu koristiti za debagovanje različitih aspekata aplikacije, uključujući Debugging Issues (pronalaženje grešaka), Debugging Memory Leaks (pronalaženje curenja memorije), i Debugging Performance (optimizacija performansi). Alati kao što su Chrome DevTools, Firefox Developer Tools i Edge DevTools su vrlo korisni za analizu i optimizaciju web aplikacija.
+
+
+1. Debugging Issues (Pronalaženje grešaka)
+Ovaj alat je koristan za pronalaženje grešaka u JavaScript kodu, kao i za analizu strukture i ponašanja aplikacije.
+
+Console Tab: Prikazuje greške, upozorenja, i prilagođene log poruke (console.log, console.error, itd.). Koristan je za jednostavno ispitivanje promenljivih i toka koda.
+
+Primer: Ako u aplikaciji imate grešku poput Uncaught TypeError, Console tab će prikazati tačnu liniju koda gde se greška pojavila.
+
+
+Sources Tab: Omogućava pregled svih JavaScript i drugih fajlova koji su učitani u aplikaciju. Takođe podržava postavljanje breakpoint-ova za praćenje toka izvršavanja koda liniju po liniju.
+
+Breakpoints: Koriste se za pauziranje izvršavanja koda na određenim linijama, što vam omogućava da pregledate stanje promenljivih u tom trenutku. Na primer, možete postaviti breakpoint u funkciji koja ima problem i korak po korak pratiti šta se dešava.
+
+
+Watch Expressions: U Sources tabu možete dodati izraze u "Watch" sekciju kako biste pratili vrednosti određenih promenljivih tokom debagovanja.
+
+Koristan primer: Kada želite da vidite kako se vrednost određene promenljive menja kroz iteraciju ili funkciju, dodavanje te promenljive u Watch Expressions omogućava vam da direktno pratite njenu vrednost.
+
+
+
+2. Debugging Memory Leaks (Pronalaženje curenja memorije)
+Curenje memorije se dešava kada objekti koji više nisu potrebni ostaju u memoriji, što može usporiti aplikaciju ili izazvati njen pad. Memory tab u DevTools-u omogućava analiziranje i pronalaženje ovakvih problema.
+
+
+Heap Snapshot: Snimak memorije (heap snapshot) pokazuje stanje memorije u određenom trenutku. Poređenjem dva snimka možete otkriti objekte koji nisu oslobođeni i koji možda izazivaju curenje memorije.
+
+Koristan primer: Ako napravite snimak pre i posle akcije koja bi trebalo da oslobodi memoriju (npr. zatvaranje modala), možete analizirati da li su svi objekti oslobođeni.
+
+
+Allocation Timeline: Prati tok alokacije memorije tokom vremena, što može pomoći da se identifikuju operacije koje troše previše memorije.
+
+Koristan primer: Ako primetite nagli skok u korišćenju memorije tokom nekog procesa (kao što je učitavanje slika), Allocation Timeline će vam pokazati gde dolazi do opterećenja.
+
+
+Object Retainers: Prikazuje reference koje zadržavaju objekte u memoriji i sprečavaju njihovo brisanje. Ovo je korisno za otkrivanje objekata koji su još uvek u upotrebi.
+
+Na primer, ako imate DOM elemente koji su uklonjeni sa stranice, ali još uvek postoje reference na njih iz JavaScript koda, Object Retainers će vam pomoći da otkrijete gde se te reference nalaze.
+
+
+
+3. Debugging Performance (Optimizacija performansi)
+Za optimizaciju performansi, Browser DevTools nudi Performance Tab koji omogućava analiziranje brzine učitavanja, vremena izvršavanja funkcija, i drugih aspekata koji utiču na brzinu aplikacije.
+
+Recording (Snimanje performansi): Omogućava snimanje tokova izvršavanja aplikacije i analizu rada funkcija, renderovanja i JavaScript događaja. Snimak će vam pokazati gde se najviše vremena troši i koje funkcije usporavaju aplikaciju.
+
+Na primer, ako imate sporu funkciju koja se izvršava na scroll događaju, snimak će vam pokazati koliko vremena ta funkcija troši i kako utiče na korisničko iskustvo.
+
+
+Flame Chart (Grafikon opterećenja): Vizualizacija koja prikazuje koje funkcije se najviše pozivaju i troše najviše vremena. Flame Chart pomaže da lako identifikujete gde je usko grlo u performansama.
+
+Na primer, ako se određena funkcija često poziva i zauzima najviše vremena, Flame Chart će jasno prikazati te "plamene" trake kao upozorenje za optimizaciju.
+
+
+FPS (Frames Per Second): Prati broj sličica u sekundi tokom vremena izvršavanja. Ovo je posebno važno za aplikacije sa animacijama ili aplikacije koje zahtevaju glatko korisničko iskustvo.
+
+Na primer, ako vaša aplikacija koristi CSS animacije ili JavaScript animacije, FPS metrika će vam pokazati da li animacije teku glatko (idealno je 60 FPS) ili imaju opadanje performansi.
+
+
+Zaključak
+Browser DevTools su izuzetno moćan alat za praćenje i optimizaciju rada web aplikacija:
+
+Debugging Issues: Console i Sources tabovi omogućavaju otkrivanje grešaka i ispitivanje toka izvršavanja koda.
+Debugging Memory Leaks: Memory tab pomaže u otkrivanju i rešavanju problema sa curenjem memorije, koristeći Heap Snapshot, Allocation Timeline i Object Retainers.
+Debugging Performance: Performance tab omogućava snimanje performansi, analizu vremenskih tokova i identifikaciju uskih grla u brzini aplikacije.
+Korišćenjem ovih funkcionalnosti u Browser DevTools-u, programeri mogu značajno poboljšati stabilnost, brzinu i efikasnost svojih JavaScript aplikacija.
