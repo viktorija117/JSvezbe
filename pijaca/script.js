@@ -16,7 +16,7 @@ function addToCart(element){
         cartItem.innerHTML += 
         `<div class="cart-single-item">
             <h3>${name}</h3>
-            <p>${price} RSD * ${quantity} = ${total} RSD</p>
+            <p>${price} RSD * ${quantity} = <span>${total}</span> RSD</p>
             <button onclick="removeFromCart(this)" class="remove-item">Ukloni</button>
         </div>`
 
@@ -32,5 +32,21 @@ function addToCart(element){
 }
 
 function removeFromCart(element){
-    
+    let singleItem = element.closest('.cart-single-item');
+    let price = parseInt(singleItem.querySelector('p span').innerText);
+    let name = singleItem.querySelector('h3').innerText;
+
+    let items = document.querySelectorAll('.single-item');
+    allTotal -= price;
+    document.querySelector('.total').innerText =`Ukupno: ${allTotal} RSD` ;
+    singleItem.remove();
+
+    items.forEach(function (item) {
+        let itemName = item.querySelector('.si-content h3').innerText;
+        if (itemName === name){
+            item.querySelector('.actions input').value = 0;
+            item.querySelector('.actions button').removeAttribute('disabled');
+            item.querySelector('.actions button').innerText = 'Dodaj';
+        }
+    })
 }
