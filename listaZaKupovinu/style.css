@@ -8,16 +8,16 @@
 }
 
 body {
-    background-color: #f4f4f9; /* Svetla siva pozadina */
-    color: #333; /* Tamnosiva boja teksta */
+    background-color: #f4f4f9; 
+    color: #333; 
     padding: 20px;
 }
 
 /* Kontejner */
 .container {
-    background-color: #fff; /* Bela pozadina */
-    border-radius: 8px; /* Blago zaobljeni uglovi */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blaga senka */
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     padding: 20px;
     width: 90%;
     margin: 0 auto;
@@ -27,7 +27,7 @@ body {
 h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #0078d7; /* Svetloplava za akcenat */
+    color: #0078d7; 
 }
 
 h3 {
@@ -45,7 +45,8 @@ h3 {
 }
 
 #formaZaNamirnice input,
-#formaZaNamirnice button {
+#formaZaNamirnice button,
+#formaZaNamirnice select {
     width: 100%;
     padding: 15px;
     border: 1px solid #ccc;
@@ -54,7 +55,7 @@ h3 {
 }
 
 #formaZaNamirnice button {
-    background-color: #0078d7; /* Svetloplava boja dugmeta */
+    background-color: #0078d7; 
     color: #fff;
     border: none;
     cursor: pointer;
@@ -62,7 +63,24 @@ h3 {
 }
 
 #formaZaNamirnice button:hover {
-    background-color: #005bb5; /* Tamnija plava na hover */
+    background-color: #005bb5; 
+}
+
+/* Stil za padajući meni */
+#formaZaNamirnice select {
+    appearance: none; 
+    background-color: #fff;
+    color: #333;
+    padding-right: 30px; 
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNMTIgMTVsNi00LThhMSAxIDAgMCAxIDEuNDEgMS40MWw1LjI1IDEuNDlMMTIgMjRsLTguNjYtNC4wOWMtMS4wNy0uNzgxLTEuMDUtMi4wOTcuMDItMy4yNmwuNzYtLjA3eiIgZmlsbD0iI2NjYyIvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    cursor: pointer;
+}
+
+#formaZaNamirnice select:hover {
+    border-color: #0078d7;
 }
 
 /* Tabela */
@@ -101,7 +119,7 @@ td button {
 }
 
 td button:hover {
-    color: #0078d7; /* Svetloplava na hover */
+    color: #0078d7;
 }
 
 /* Polja za unos u tabeli (prilikom uređivanja) */

@@ -1,10 +1,37 @@
 // Selektovanje elemenata
 let formaZaNamirnice = document.getElementById('formaZaNamirnice');
-let nazivNamirnice = document.getElementById('nazivNamirnice');
 let kolicinaNamirnica = document.getElementById('kolicinaNamirnica');
 
 // Učitavanje liste namirnica iz Local Storage
 let namirnice = JSON.parse(localStorage.getItem('namirnice')) || [];
+
+
+// Lista dostupnih namirnica
+let dostupneNamirnice = [
+    "Hleb (bela vekna)",
+    "Hleb (integralni)",
+    "Piletina",
+    "Šunka",
+    "Slanina",
+    "Sir (trapist)",
+    "Paradajz",
+    "Krastavac",
+    "Majonez",
+    "Kečap",
+    "Senf",
+    "Salata",
+    "Luk",
+    "Paprika",
+    "Jaja"
+];
+// Popunjavanje select opcija
+const nazivNamirniceSelect = document.getElementById('nazivNamirnice');
+dostupneNamirnice.forEach(namirnica => {
+    const opcija = document.createElement('option');
+    opcija.value = namirnica;
+    opcija.textContent = namirnica;
+    nazivNamirniceSelect.appendChild(opcija);
+});
 
 function prikaziNamirnice() {
     const kontejner = document.querySelector('.container');

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pijaca</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<h1>Pijaca</h1>
+
+	<div class="container">
+		<div class="items">
+			<h2>Namirnice</h2>
+
+			<div class="single-item">
+				<img src="img/namirnica.jpeg" alt="Hleb">
+				<div class="si-content">
+					<h3>Hleb</h3>
+					<p class="price">RSD: 5</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="addToCart(this)">Dodaj</button>
+				</div>
+			</div>
+
+			<div class="single-item">
+				<img src="img/namirnica.jpeg" alt="Šunka">
+				<div class="si-content">
+					<h3>Šunka</h3>
+					<p class="price">RSD: 1</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="addToCart(this)">Dodaj</button>
+				</div>
+			</div>
+
+			<div class="single-item">
+				<img src="img/namirnica.jpeg" alt="Sir (trapist)">
+				<div class="si-content">
+					<h3>Sir</h3>
+					<p class="price">RSD: 1</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="addToCart(this)">Dodaj</button>
+				</div>
+			</div>
+
+			<div class="single-item">
+				<img src="img/namirnica.jpeg" alt="Kečap">
+				<div class="si-content">
+					<h3>Kečap</h3>
+					<p class="price">RSD: 2</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="addToCart(this)">Dodaj</button>
+				</div>
+			</div>
+
+			<div class="single-item">
+				<img src="img/namirnica.jpeg" alt="Salata">
+				<div class="si-content">
+					<h3>Salata</h3>
+					<p class="price">RSD: 1</p>
+				</div>
+				<div class="actions">
+					<input type="number" name="quantity" value="0" min="0">
+					<button onclick="addToCart(this)">Dodaj</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="cart">
+			<h2>Korpa</h2>
+			
+			<div class="cart-items"></div>
+			<div class="total"></div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
