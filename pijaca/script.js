@@ -50,3 +50,17 @@ function removeFromCart(element){
         }
     })
 }
+
+function searchItems() {
+    const query = document.getElementById("search-bar").value.toLowerCase();
+    const items = document.querySelectorAll(".single-item");
+
+    items.forEach(item => {
+        const itemName = item.querySelector("h3").innerText.toLowerCase();
+        if (itemName.includes(query)) {
+            item.style.display = "flex"; 
+        } else {
+            item.style.display = "none"; 
+        }
+    });
+}

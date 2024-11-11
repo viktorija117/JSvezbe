@@ -8,6 +8,13 @@
 
 	<h1>Pijaca</h1>
 
+	<div class="search">
+        <form onsubmit="return false;">
+			<label>Pretraži</label>
+            <input type="text" id="search-bar" class="search-bar" placeholder="Pretraži proizvode" oninput="searchItems()">
+        </form>
+    </div>
+
 	<div class="container">
 		<div class="items">
 			<h2>Namirnice</h2>
@@ -80,6 +87,7 @@
 			<div class="cart-items"></div>
 			<div class="total"></div>
 		</div>
+	
 	</div>
 
 	<script src="script.js"></script>
