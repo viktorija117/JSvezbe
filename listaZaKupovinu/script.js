@@ -8,21 +8,11 @@ let namirnice = JSON.parse(localStorage.getItem('namirnice')) || [];
 
 // Lista dostupnih namirnica
 let dostupneNamirnice = [
-    "Hleb (bela vekna)",
-    "Hleb (integralni)",
-    "Piletina",
+    "Hleb",
     "Šunka",
-    "Slanina",
-    "Sir (trapist)",
-    "Paradajz",
-    "Krastavac",
-    "Majonez",
+    "Sir",
     "Kečap",
-    "Senf",
-    "Salata",
-    "Luk",
-    "Paprika",
-    "Jaja"
+    "Salata"
 ];
 // Popunjavanje select opcija
 const nazivNamirniceSelect = document.getElementById('nazivNamirnice');
@@ -96,7 +86,7 @@ function dodajNamirnicu(e) {
 }
 
 function izbrisiNamirnicu(index){
-    namirnice.splice(index,1); // uklanjam elemente počevši od indeksa index i uklanja se 1 element počevši odatle
+    namirnice.splice(index,1); // Uklanjamo elemente počevši od indeksa index i uklanja se 1 element počevši odatle
     azurirajLocalStorage();
     prikaziNamirnice();
 }

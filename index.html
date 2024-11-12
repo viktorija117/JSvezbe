@@ -57,12 +57,31 @@
     </style>
 </head>
 <body>
-    <h1>Dobrodošli na JavaScript Vežbe</h1>
+    <h1 id="title">Dobrodošli na JavaScript Vežbe</h1>
     <ul>
         <li><a href="kalkulatorProcenata/index.html">Vežba 1 - kalkulator Procenata</a></li>
         <li><a href="listaZaKupovinu/index.html">Vežba 2 - Lista za Kupovinu</a></li>
         <li><a href="pijaca/index.html">Vežba 3 - Pijaca</a></li>
     </ul>
+
+    <script>
+
+        const title = document.getElementById('title');
+        const titleText = title.textContent;
+        title.textContent = '';
+
+        let index = 0;
+        function type(){
+            if(index < titleText.length){
+                title.textContent += titleText.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+
+        type();
+
+    </script>
 </body>
 </html>
 
